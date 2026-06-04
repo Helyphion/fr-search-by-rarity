@@ -1,19 +1,55 @@
 import json
 
+
+# set up structure of output JSON (not the most concise but it'll do for this purpose)
+outputDict = { "primary": {}, "secondary": {}, "tertiary": {} }
+
+outputDict["primary"]["common"] = {}
+outputDict["primary"]["uncommon"] = {}
+outputDict["primary"]["limited"] = {}
+outputDict["primary"]["rare"] = {}
+
+outputDict["secondary"]["common"] = {}
+outputDict["secondary"]["uncommon"] = {}
+outputDict["secondary"]["limited"] = {}
+outputDict["secondary"]["rare"] = {}
+
+outputDict["tertiary"]["common"] = {}
+outputDict["tertiary"]["uncommon"] = {}
+outputDict["tertiary"]["limited"] = {}
+outputDict["tertiary"]["rare"] = {}
+
+
 with open("data/all-genes-plaintext.txt", "r") as file:
-    geneNames = file.read().splitlines()
+    allGenesPlaintextFile = file.read().splitlines()
 
-# takes common prims for now (TODO: reformat input file n stuff to make this able to get all yeag)
-commonPrims = geneNames[1].split(", ")
+geneNames = []
 
-dict = {}
+for x in allGenesPlaintextFile:
+    # filters out all the stuff that is not gene names
+    if not x.isupper() and x != "":
+        geneNames.append( x.lower().split(", ") )
 
-for x in commonPrims:
-    dict[x] = {}
 
+for x in geneNames[0]:
+    outputDict["primary"]["common"][x] = {}
+    print(x)
+outputDict["primary"]["uncommon"] = geneNames[1]
+
+print(outputDict)
+
+"""
 with open("data/modern-prims-html.txt", "r") as file:
     modernPrims = file.read().splitlines()
 
-test = json.dumps(dict, indent=4)
+for x in modernPrims:
+    geneID = int(x.split('"')[1])
+    # the [:-8] trims "</option" bit from extracted name
+    geneName = x.split('>')[1][:-8]
+    outputDict[geneName] = {"modern": geneID}
 
-# print(test)
+"""
+
+test = json.dumps(outputDict, indent=4)
+
+print(test)

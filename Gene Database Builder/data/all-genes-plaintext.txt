@@ -10,8 +10,29 @@ Arc, Boulder, Candy, Candycane, Chrysocolla, Crosshatch, Diamond, Display, Fern,
 PRIMARY / RARE:
 Crystal, Dimension, Glass, Glow, Harlequin, Iridescent, Metallic, Petals, Petrified, Pharaoh, Starmap, Throne, Twinkle, Wasp, Wicker
 
------
 
-SECONDARY
 
-TERTIARY
+SECONDARY / COMMON:
+
+
+SECONDARY / UNCOMMON:
+
+
+SECONDARY / LIMITED:
+
+
+SECONDARY / RARE:
+
+
+
+
+TERTIARY / COMMON:
+
+
+TERTIARY / UNCOMMON:
+
+
+TERTIARY / LIMITED:
+
+
+TERTIARY / RARE:
