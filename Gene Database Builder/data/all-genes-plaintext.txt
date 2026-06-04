@@ -1,14 +1,13 @@
-PRIMARY
-COMMON:
+PRIMARY / COMMON:
 Arapaima, Caterpillar, Checkers, Clown, Fade, Falcon, Laced, Leopard, Marble, Piebald, Rabicano, Radio, Savanna, Shaggy, Speckle, Spool, Swirl, Tapir, Tiger, Varnish, Wrought
 
-UNCOMMON:
+PRIMARY / UNCOMMON:
 Bar, Boa, Bright, Caiman, Cherub, Chevron, Chorus, Cinder, Criculaworm, Faire, Flaunt, Giraffe, Ink, Jaguar, Jupiter, Lionfish, Mochlus, Mosaic, Patina, Ragged, Rattlesnake, Ribbon, Ripple, Shell, Sphinxmoth, Splatter, Strike, Vipera, Wolf
 
-LIMITED:
+PRIMARY / LIMITED:
 Arc, Boulder, Candy, Candycane, Chrysocolla, Crosshatch, Diamond, Display, Fern, Ground, Love, Octopus, Orb, Papillon, Phantom, Pinstripe, Poison, Python, Sailfish, Skink, Slime, Soil, Stitched, Tide
 
-RARE:
+PRIMARY / RARE:
 Crystal, Dimension, Glass, Glow, Harlequin, Iridescent, Metallic, Petals, Petrified, Pharaoh, Starmap, Throne, Twinkle, Wasp, Wicker
 
 -----
