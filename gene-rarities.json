@@ -1,65 +1,420 @@
 {
 "primary": {
     "common": {
-        "checkers": { "modern": 412 },
-        "clown": { "modern": 3 },
-        "fade": { "modern": 42 },
-        "falcon": { "modern": 16 },
-        "laced": { "modern": 26 },
-        "leopard": { "modern": 40 },
-        "piebald": { "modern": 9 },
-        "savannah": { "modern": 18 },
-        "speckle": { "modern": 4 },
-        "swirl": { "modern": 57 },
-        "tapir": { "modern": 21 },
-        "tiger": { "modern": 2 },
-        "varnish": { "modern": 450 }
+        "checkers": { 
+            "modern": 412,
+            "gaoler": 378,
+            "banescale": 454,
+            "veilspun": 456,
+            "aberration": 413,
+            "undertide": 127,
+            "aether": 319,
+            "sandsurge": 440
+        },
+        "clown": { 
+            "modern": 3,
+            "gaoler": 77,
+            "banescale": 75,
+            "veilspun": 76,
+            "aberration": 222,
+            "undertide": 265,
+            "aether": 169,
+            "sandsurge": 196
+        },
+        "fade": { 
+            "modern": 42,
+            "gaoler": 86,
+            "banescale": 85,
+            "veilspun": 60,
+            "aberration": 90,
+            "undertide": 115,
+            "aether": 148,
+            "sandsurge": 191
+        },
+        "falcon": { 
+            "modern": 16,
+            "gaoler": 30,
+            "banescale": 80,
+            "veilspun": 139,
+            "aberration": 92,
+            "undertide": 122,
+            "aether": 322,
+            "sandsurge": 448
+        },
+        "laced": { 
+            "modern": 26,
+            "gaoler": 73,
+            "banescale": 48,
+            "veilspun": 61,
+            "aether": 156
+        },
+        "leopard": { 
+            "modern": 40,
+            "gaoler": 173,
+            "banescale": 109,
+            "veilspun": 142,
+            "aberration": 225
+        },
+        "piebald": { 
+            "modern": 9,
+            "gaoler": 31,
+            "undertide": 272,
+            "aether": 159
+        },
+        "savannah": { 
+            "modern": 18
+        },
+        "speckle": { 
+            "modern": 4,
+            "banescale": 147,
+            "veilspun": 144,
+            "aberration": 98,
+            "undertide": 132
+        },
+        "swirl": { 
+            "modern": 57,
+            "gaoler": 179,
+            "aberration": 104,
+            "undertide": 134
+        },
+        "tapir": { 
+            "modern": 21,
+            "gaoler": 35,
+            "banescale": 74,
+            "veilspun": 62,
+            "aberration": 95,
+            "undertide": 274,
+            "aether": 330
+        },
+        "tiger": { 
+            "modern": 2,
+            "gaoler": 36,
+            "banescale": 46,
+            "aberration": 95,
+            "undertide": 275,
+            "aether": 331
+        },
+        "varnish": { 
+            "modern": 450,
+            "gaoler": 381,
+            "banescale": 452,
+            "veilspun": 453,
+            "aberration": 451,
+            "undertide": 276,
+            "aether": 332
+        }
     },
     "uncommon": {
-        "bar": { "modern": 6 },
-        "boa": { "modern": 232 },
-        "cherub": { "modern": 10 },
-        "chorus": { "modern": 337 },
-        "cinder": { "modern": 213 },
-        "flaunt": { "modern": 82 },
-        "giraffe": { "modern": 12 },
-        "jaguar": { "modern": 19 },
-        "jupiter": { "modern": 14 },
-        "lionfish": { "modern": 25 },
-        "mosaic": { "modern": 58 },
-        "ragged": { "modern": 505 },
-        "ribbon": { "modern": 84 },
-        "ripple": { "modern": 5 },
-        "sphinxmoth": { "modern": 517 },
-        "vipera": { "modern": 8 }
+        "bar": { 
+            "modern": 6,
+            "gaoler": 34,
+            "banescale": 181,
+            "veilspun": 145,
+            "aberration": 89,
+            "undertide": 117,
+            "aether": 150,
+            "sandsurge": 444
+        },
+        "boa": { 
+            "modern": 232,
+            "gaoler": 171,
+            "banescale": 235,
+            "veilspun": 236,
+            "aberration": 233,
+            "undertide": 128,
+            "aether": 234,
+            "sandsurge": 189
+        },
+        "cherub": { 
+            "modern": 10,
+            "banescale": 43,
+            "veilspun": 339,
+            "aberration": 221,
+            "undertide": 119,
+            "sandsurge": 190
+        },
+        "chorus": { 
+            "modern": 337,
+            "veilspun": 338
+        },
+        "cinder": { 
+            "modern": 213,
+            "gaoler": 216,
+            "banescale": 215,
+            "veilspun": 219,
+            "aberration": 214,
+            "undertide": 218,
+            "aether": 163,
+            "sandsurge": 217
+        },
+        "flaunt": { 
+            "modern": 82,
+            "gaoler": 111,
+            "aberration": 112,
+            "undertide": 267,
+            "aether": 149,
+            "sandsurge": 193
+        },
+        "giraffe": { 
+            "modern": 12,
+            "gaoler": 27,
+            "banescale": 81,
+            "veilspun": 83,
+            "aberration": 94,
+            "undertide": 123,
+            "aether": 324
+        },
+        "jaguar": { 
+            "modern": 19,
+            "gaoler": 33,
+            "banescale": 44,
+            "veilspun": 376,
+            "aberration": 99,
+            "undertide": 269,
+            "aether": 152,
+            "sandsurge": 198
+        },
+        "jupiter": { 
+            "modern": 14,
+            "veilspun": 64,
+            "undertide": 270,
+            "aether": 153,
+            "sandsurge": 197
+        },
+        "lionfish": { 
+            "modern": 25,
+            "gaoler": 380,
+            "aberration": 100,
+            "undertide": 126,
+            "aether": 158,
+            "sandsurge": 199
+        },
+        "mosaic": { 
+            "modern": 58,
+            "gaoler": 38,
+            "banescale": 342,
+            "veilspun": 344,
+            "aberration": 341,
+            "aether": 155,
+            "sandsurge": 200
+        },
+        "ragged": { 
+            "modern": 505,
+            "banescale": 56,
+            "veilspun": 508
+        },
+        "ribbon": { 
+            "modern": 84,
+            "gaoler": 175,
+            "banescale": 183,
+            "aberration": 105,
+            "undertide": 124,
+            "aether": 327
+        },
+        "ripple": { 
+            "modern": 5,
+            "gaoler": 78,
+            "banescale": 79,
+            "aberration": 228,
+            "undertide": 130,
+            "aether": 328
+        },
+        "sphinxmoth": { 
+            "modern": 517,
+            "gaoler": 523,
+            "banescale": 521,
+            "veilspun": 72,
+            "aberration": 518,
+            "undertide": 524,
+            "aether": 519
+        },
+        "vipera": { 
+            "modern": 8,
+            "gaoler": 396,
+            "banescale": 395,
+            "veilspun": 63,
+            "aberration": 96,
+            "undertide": 398,
+            "aether": 333
+        }
     },
     "limited": {
-        "boulder": { "modern": 110 },
-        "chrysocolla": { "modern": 237 },
-        "fern": { "modern": 136 },
-        "ground": { "modern": 88 },
-        "love": { "modern": 411 },
-        "pinstripe": { "modern": 22 },
-        "orb": { "modern": 283 },
-        "poison": { "modern": 11 },
-        "python": { "modern": 23 },
-        "sailfish": { "modern": 492 },
-        "skink": { "modern": 15 },
-        "slime": { "modern": 41 },
-        "soil": { "modern": 400 },
-        "stitched": { "modern": 59 },
-        "tide": { "modern": 114 }
+        "boulder": { 
+            "modern": 110,
+            "gaoler": 289,
+            "banescale": 291,
+            "veilspun": 290,
+            "aberration": 220,
+            "undertide": 135,
+            "aether": 151,
+            "sandsurge": 188
+        },
+        "chrysocolla": { 
+            "modern": 237,
+            "undertide": 264,
+            "aether": 320,
+            "sandsurge": 195
+        },
+        "fern": { 
+            "modern": 136,
+            "banescale": 137,
+            "veilspun": 138,
+            "aberration": 223,
+            "undertide": 266,
+            "aether": 323,
+            "sandsurge": 394
+        },
+        "ground": { 
+            "modern": 88,
+            "veilspun": 382,
+            "aberration": 97,
+            "undertide": 268,
+            "aether": 325,
+            "sandsurge": 186
+        },
+        "love": { 
+            "modern": 411
+        },
+        "pinstripe": { 
+            "modern": 22,
+            "gaoler": 32,
+            "banescale": 45,
+            "aberration": 226,
+            "undertide": 121
+        },
+        "orb": { 
+            "modern": 283,
+            "gaoler": 286,
+            "banescale": 287,
+            "veilspun": 285,
+            "aberration": 102,
+            "undertide": 271,
+            "aether": 288,
+            "sandsurge": 284
+        },
+        "poison": { 
+            "modern": 11,
+            "gaoler": 174,
+            "banescale": 53,
+            "veilspun": 140,
+            "aberration": 227,
+            "undertide": 131
+        },
+        "python": { 
+            "modern": 23,
+            "aether": 160
+        },
+        "sailfish": { 
+            "modern": 492,
+            "gaoler": 498,
+            "veilspun": 500,
+            "aberration": 493,
+            "undertide": 499,
+            "aether": 494
+        },
+        "skink": { 
+            "modern": 15,
+            "gaoler": 177,
+            "banescale": 52,
+            "veilspun": 67,
+            "aberration": 229,
+            "undertide": 129,
+            "aether": 161
+        },
+        "slime": { 
+            "modern": 41,
+            "gaoler": 178,
+            "aberration": 106,
+            "undertide": 141,
+            "aether": 336
+        },
+        "soil": { 
+            "modern": 400,
+            "gaoler": 406,
+            "banescale": 404,
+            "veilspun": 409,
+            "aberration": 401,
+            "undertide": 408,
+            "aether": 402
+        },
+        "stitched": { 
+            "modern": 59,
+            "gaoler": 180,
+            "veilspun": 66,
+            "aberration": 107,
+            "undertide": 282,
+            "aether": 165
+        },
+        "tide": { 
+            "modern": 114,
+            "gaoler": 172,
+            "banescale": 184,
+            "aberration": 231,
+            "undertide": 113,
+            "aether": 164
+        }
     },
     "rare": {
-        "crystal": { "modern": 7 },
-        "harlequin": { "modern": 170 },
-        "iridescent": { "modern": 1 },
-        "metallic": { "modern": 17 },
-        "petals": { "modern": 13 },
-        "petrified": { "modern": 318 },
-        "pharaoh": { "modern": 87 },
-        "starmap": { "modern": 24 },
-        "wasp": { "modern": 20 }
+        "crystal": { 
+            "modern": 7,
+            "gaoler": 37,
+            "banescale": 182,
+            "veilspun": 146,
+            "aberration": 91,
+            "undertide": 118,
+            "aether": 321,
+            "sandsurge": 399
+        },
+        "harlequin": { 
+            "modern": 170,
+            "gaoler": 379,
+            "aberration": 224,
+            "undertide": 280,
+            "aether": 326,
+            "sandsurge": 192
+        },
+        "iridescent": { 
+            "modern": 1
+        },
+        "metallic": { 
+            "modern": 17,
+            "banescale": 49,
+            "undertide": 278,
+            "aether": 157
+        },
+        "petals": { 
+            "modern": 13,
+            "banescale": 51,
+            "veilspun": 143,
+            "undertide": 281,
+            "aether": 154,
+            "sandsurge": 446
+        },
+        "petrified": { 
+            "modern": 318
+        },
+        "pharaoh": { 
+            "modern": 87,
+            "banescale": 185,
+            "veilspun": 383,
+            "aberration": 101,
+            "undertide": 120
+        },
+        "starmap": { 
+            "modern": 24,
+            "veilspun": 65,
+            "aberration": 230,
+            "undertide": 273,
+            "aether": 168
+        },
+        "wasp": { 
+            "modern": 20,
+            "gaoler": 28,
+            "veilspun": 68,
+            "aberration": 108,
+            "undertide": 125,
+            "aether": 334
+        }
     }
 },
 
