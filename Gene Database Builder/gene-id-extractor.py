@@ -48,8 +48,6 @@ for x in geneNames:
 # this does rely on there being exactly 12 lines of gene data in the plaintext file to work correctly, just keep that in mind
 
 
-
-
 def addModernGeneIDs(slot, geneList):
     rar = 0
     for x in geneList:
@@ -61,7 +59,6 @@ def addModernGeneIDs(slot, geneList):
         # cycles through rarities to find the entry of the given gene
         for y in range(4):
             if geneName in outputDict[slot][rarities[rar]]:
-                print(rarities[rar])
                 outputDict[slot][rarities[rar]][geneName] = {"modern": geneID}
                 break
             else:
@@ -80,6 +77,37 @@ addModernGeneIDs("secondary", modernSecs)
 addModernGeneIDs("tertiary", modernTerts)
 
 # ...oof so jank </3
+
+# same thing but modified for ancients (to distinguish by breeds):
+def addAncientGeneIDs(slot, geneList):
+    rar = 0
+    for x in geneList:
+        # extracts the gene name and ID from the line of HTML
+        geneID = int(x.split('"')[1])
+        # this looks so fuckass but I swear it makes sense (it splits the line at spaces to separate info, then trims some characters off the ends to get just the name)
+        geneName = x.lower().split(' ')[4][19:]
+        geneBreed = x.lower().split(' ')[5][1:-10]
+
+        # cycles through rarities to find the entry of the given gene, appends an entry for the given ancient breed
+        for y in range(4):
+            if geneName in outputDict[slot][rarities[rar]]:
+                print(rarities[rar])
+                outputDict[slot][rarities[rar]][geneName][geneBreed] = geneID
+                break
+            else:
+                rar += 1
+        rar = 0
+
+with open("data/ancient-prims-html.txt", "r") as file:
+    ancientPrims = file.read().splitlines()
+with open("data/ancient-secs-html.txt", "r") as file:
+    ancientSecs = file.read().splitlines()
+with open("data/ancient-terts-html.txt", "r") as file:
+    ancientTerts = file.read().splitlines()
+
+addAncientGeneIDs("primary", ancientPrims)
+addAncientGeneIDs("secondary", ancientSecs)
+# addAncientGeneIDs("tertiary", ancientTerts)
 
 test = json.dumps(outputDict, indent=4)
 
