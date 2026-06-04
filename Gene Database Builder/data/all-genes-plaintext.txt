@@ -16,7 +16,7 @@ SECONDARY / COMMON:
 Arowana, Blend, Chess, Clouded, Edged, Eye Spots, Freckle, Lacquer, Larvae, Marbled, Mottle, Paint, Peregrine, Roan, Safari, Signal, Spire, Streak, Striation, Stripes, Thread
 
 SECONDARY / UNCOMMON:
-Arrow, Bar, Blaze, Breakup, Carousel, Choir, Coil, Croc, Current, Daub, Diamondback, Drip, Dye, Eel, Flair, Hawkmoth, Hex, Hypnotic, Noxtide, Oxidize, Pack, Riopa, Rosette, Saddle, Saturn, Seraph, Silkspot, Tear, Vivid, Web
+Arrow, Blaze, Breakup, Carousel, Choir, Coil, Croc, Current, Daub, Diamondback, Drip, Dye, Eel, Flair, Hawkmoth, Hex, Hypnotic, Noxtide, Oxidize, Pack, Riopa, Rosette, Saddle, Saturn, Seraph, Silkspot, Tear, Vivid, Web
 
 SECONDARY / LIMITED:
 Affection, Fissure, Foam, Hatch, Icing, Loam, Loop, Malachite, Marlin, Morph, Myrid, Paisley, Parade, Patchwork, Rings, Sludge, Spade, Spinner, Spirit, Sugarplum, Swallowtail, Toxin, Trail, Weaver
