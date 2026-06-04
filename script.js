@@ -1,1 +1,1 @@
-
+const primRarity = document.getElementById("prim-rarity")

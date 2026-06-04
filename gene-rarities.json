@@ -1,0 +1,177 @@
+{
+"primary": {
+    "common": {
+        "checkers": { "modern": 412 },
+        "clown": { "modern": 3 },
+        "fade": { "modern": 42 },
+        "falcon": { "modern": 16 },
+        "laced": { "modern": 26 },
+        "leopard": { "modern": 40 },
+        "piebald": { "modern": 9 },
+        "savannah": { "modern": 18 },
+        "speckle": { "modern": 4 },
+        "swirl": { "modern": 57 },
+        "tapir": { "modern": 21 },
+        "tiger": { "modern": 2 },
+        "varnish": { "modern": 450 }
+    },
+    "uncommon": {
+        "bar": { "modern": 6 },
+        "boa": { "modern": 232 },
+        "cherub": { "modern": 10 },
+        "chorus": { "modern": 337 },
+        "cinder": { "modern": 213 },
+        "flaunt": { "modern": 82 },
+        "giraffe": { "modern": 12 },
+        "jaguar": { "modern": 19 },
+        "jupiter": { "modern": 14 },
+        "lionfish": { "modern": 25 },
+        "mosaic": { "modern": 58 },
+        "ragged": { "modern": 505 },
+        "ribbon": { "modern": 84 },
+        "ripple": { "modern": 5 },
+        "sphinxmoth": { "modern": 517 },
+        "vipera": { "modern": 8 }
+    },
+    "limited": {
+        "boulder": { "modern": 110 },
+        "chrysocolla": { "modern": 237 },
+        "fern": { "modern": 136 },
+        "ground": { "modern": 88 },
+        "love": { "modern": 411 },
+        "pinstripe": { "modern": 22 },
+        "orb": { "modern": 283 },
+        "poison": { "modern": 11 },
+        "python": { "modern": 23 },
+        "sailfish": { "modern": 492 },
+        "skink": { "modern": 15 },
+        "slime": { "modern": 41 },
+        "soil": { "modern": 400 },
+        "stitched": { "modern": 59 },
+        "tide": { "modern": 114 }
+    },
+    "rare": {
+        "crystal": { "modern": 7 },
+        "harlequin": { "modern": 170 },
+        "iridescent": { "modern": 1 },
+        "metallic": { "modern": 17 },
+        "petals": { "modern": 13 },
+        "petrified": { "modern": 318 },
+        "pharaoh": { "modern": 87 },
+        "starmap": { "modern": 24 },
+        "wasp": { "modern": 20 }
+    }
+},
+
+"secondary": {
+    "common": {
+        "blend": { "modern": 42 },
+        "chess": { "modern": 412 },
+        "clouded": { "modern": 40 },
+        "edged": { "modern": 26 },
+        "eye spots": { "modern": 3 },
+        "freckle": { "modern": 4 },
+        "lacquer": { "modern": 450 },
+        "marbled": { "modern": 57 },
+        "paint": { "modern": 10 },
+        "peregrine": { "modern": 11 },
+        "safari": { "modern": 18 },
+        "striation": { "modern": 21 },
+        "stripes": { "modern": 2 }
+    },
+    "uncommon": {
+        "blaze": { "modern": 213 },
+        "breakup": { "modern": 58 },
+        "choir": { "modern": 337 },
+        "current": { "modern": 6 },
+        "daub": { "modern": 7 },
+        "eel": { "modern": 84 },
+        "flair": { "modern": 82 },
+        "hawkmoth": { "modern": 517 },
+        "hex": { "modern": 14 },
+        "hypnotic": { "modern": 9 },
+        "noxtide": { "modern": 24 },
+        "rosette": { "modern": 19 },
+        "saddle": { "modern": 232 },
+        "saturn": { "modern": 15 },
+        "seraph": { "modern": 5 },
+        "tear": { "modern": 505 }
+    },
+    "limited": {
+        "affection": { "modern": 411 },
+        "fissure": { "modern": 88 },
+        "foam": { "modern": 113 },
+        "loam": { "modern": 400 },
+        "malachite": { "modern": 237 },
+        "marlin": { "modern": 492 },
+        "morph": { "modern": 23 },
+        "myrid": { "modern": 110 },
+        "paisley": { "modern": 136 },
+        "patchwork": { "modern": 59 },
+        "sludge": { "modern": 41 },
+        "spinner": { "modern": 16 },
+        "toxin": { "modern": 12 },
+        "trail": { "modern": 22 },
+        "weaver": { "modern": 283 }
+    },
+    "rare": {
+        "alloy": { "modern": 17 },
+        "bee": { "modern": 20 },
+        "butterfly": { "modern": 13 },
+        "constellation": { "modern": 25 },
+        "facet": { "modern": 8 },
+        "jester": { "modern": 170 },
+        "lode": { "modern": 318 },
+        "sarcophagus": { "modern": 87 },
+        "shimmer": { "modern": 1 }
+    }
+},
+
+"tertiary": {
+    "common": {
+        "contour": { "modern": 13 },
+        "darts": { "modern": 484 },
+        "peacock": { "modern": 24 },
+        "points": { "modern": 107 },
+        "thylacine": { "modern": 11 },
+        "underbelly": { "modern": 5 }
+    },
+    "uncommon": {
+        "crackle": { "modern": 6 },
+        "gecko": { "modern": 411 },
+        "gembond": { "modern": 4 },
+        "ghost": { "modern": 20 },
+        "lace": { "modern": 16 },
+        "okapi": { "modern": 9 },
+        "ringlets": { "modern": 23 },
+        "runes": { "modern": 14 },
+        "smoke": { "modern": 7 },
+        "sparkle": { "modern": 97 },
+        "spines": { "modern": 8 }
+    },
+    "limited": {
+        "capsule": { "modern": 18 },
+        "firebreather": { "modern": 161 },
+        "firefly": { "modern": 22 },
+        "flecks": { "modern": 103 },
+        "keel": { "modern": 53 },
+        "magpie": { "modern": 584 },
+        "polkadot": { "modern": 168 },
+        "scales": { "modern": 15 },
+        "smirch": { "modern": 19 },
+        "veined": { "modern": 38 }
+    },
+    "rare": {
+        "circuit": { "modern": 1 },
+        "eclipse": { "modern": 421 },
+        "filigree": { "modern": 21 },
+        "glimmer": { "modern": 10 },
+        "glowtail": { "modern": 54 },
+        "koi": { "modern": 73 },
+        "opal": { "modern": 17 },
+        "soap": { "modern": 105 },
+        "stained": { "modern": 12 },
+        "wish": { "modern": 213 }
+    }
+}
+}
