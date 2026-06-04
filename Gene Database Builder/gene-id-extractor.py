@@ -23,15 +23,6 @@ outputDict["tertiary"]["rare"] = {}
 with open("data/all-genes-plaintext.txt", "r") as file:
     allGenesPlaintextFile = file.read().splitlines()
 
-with open("data/modern-prims-html.txt", "r") as file:
-    modernPrims = file.read().splitlines()
-
-for x in modernPrims:
-    geneID = int(x.split('"')[1])
-    # the [:-8] trims "</option" bit from extracted name
-    geneName = x.lower().split('>')[1][:-8]
-    outputDict[geneName] = {"modern": geneID}
-
 geneNames = []
 
 for x in allGenesPlaintextFile:
@@ -49,7 +40,6 @@ rar = 0
 for x in geneNames:
     for y in x:
         outputDict[geneSlots[slot]][rarities[rar]][y] = {}
-        print(y)
     rar += 1
     # cycles thru the 4 rarities, once at the end of that, resets to first rarity, and switches gene slot
     if rar == 4:
@@ -58,6 +48,38 @@ for x in geneNames:
 # this does rely on there being exactly 12 lines of gene data in the plaintext file to work correctly, just keep that in mind
 
 
+
+
+def addModernGeneIDs(slot, geneList):
+    rar = 0
+    for x in geneList:
+        # extracts the gene name and ID from the line of HTML
+        geneID = int(x.split('"')[1])
+        # the [:-8] trims "</option" bit from extracted name
+        geneName = x.lower().split('>')[1][:-8]
+
+        # cycles through rarities to find the entry of the given gene
+        for y in range(4):
+            if geneName in outputDict[slot][rarities[rar]]:
+                print(rarities[rar])
+                outputDict[slot][rarities[rar]][geneName] = {"modern": geneID}
+                break
+            else:
+                rar += 1
+        rar = 0
+
+with open("data/modern-prims-html.txt", "r") as file:
+    modernPrims = file.read().splitlines()
+with open("data/modern-secs-html.txt", "r") as file:
+    modernSecs = file.read().splitlines()
+with open("data/modern-terts-html.txt", "r") as file:
+    modernTerts = file.read().splitlines()
+
+addModernGeneIDs("primary", modernPrims)
+addModernGeneIDs("secondary", modernSecs)
+addModernGeneIDs("tertiary", modernTerts)
+
+# ...oof so jank </3
 
 test = json.dumps(outputDict, indent=4)
 
