@@ -91,7 +91,6 @@ def addAncientGeneIDs(slot, geneList):
         # cycles through rarities to find the entry of the given gene, appends an entry for the given ancient breed
         for y in range(4):
             if geneName in outputDict[slot][rarities[rar]]:
-                print(rarities[rar])
                 outputDict[slot][rarities[rar]][geneName][geneBreed] = geneID
                 break
             else:
@@ -107,8 +106,11 @@ with open("data/ancient-terts-html.txt", "r") as file:
 
 addAncientGeneIDs("primary", ancientPrims)
 addAncientGeneIDs("secondary", ancientSecs)
-# addAncientGeneIDs("tertiary", ancientTerts)
+addAncientGeneIDs("tertiary", ancientTerts)
 
-test = json.dumps(outputDict, indent=4)
+jsonOutput = json.dumps(outputDict, indent=4)
 
-print(test)
+with open("output.json", "w") as file:
+    file.write(jsonOutput)
+
+print("the json output has been (re)generated! (yay yippie, etc)")
