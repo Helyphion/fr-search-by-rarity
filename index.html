@@ -2,6 +2,8 @@
 
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <title>FR Search by Rarity</title>
 <!-- TODO: make a proper icon.. eventually -->
 <link rel="icon" href="favicon.ico">
@@ -18,9 +20,10 @@ body {
     /*transform: skewX(-1deg);   sometimes I just feel evil..*/
 }
 
-form {
+.box {
     border: 0.1rem solid #d8dee9;
     padding: 0.5rem;
+    margin: 0.5rem;
 }
 </style>
 </head>
@@ -30,47 +33,63 @@ form {
 <body>
 
 <!-- first row of boxes-->
-<div class="row">
+<div class="row no-gutters">
 
-<div class="col-sm">
-    info
-</div>
+    <!-- intro text -->
+    <div class="col-sm">
+        <div class="box">
+            info
+        </div>
+    </div>
 
-<div class="col-sm">
-    <div>util</div>
-    <div>m / f</div>
-</div>
+    <!-- utility toggles -->
+    <div class="col-sm">
+        <div class="box">
+            util
+        </div>
+    </div>
 
-<div class="col-sm">
-    breeds
-</div>
+    <!-- breed rarity -->
+    <div class="col-sm">
+        <div class="box">
+            breeds
+        </div>
+    </div>
 
 </div>
 
 <!-- second row of boxes -->
-<div class="row">
+<div class="row no-gutters">
+    <!-- primary gene rarity -->
+    <div class="col-sm">
+        <form id="prim-rarity" class="box">
+            <input type="checkbox" name="prim-rarity" value="common-prim">
+            <label for="common-prim">Common</label>
+            <br>
+            <input type="checkbox" name="prim-rarity" value="uncommon-prim">
+            <label for="uncommon-prim">Uncommon</label>
+            <br>
+            <input type="checkbox" name="prim-rarity" value="limited-prim">
+            <label for="limited-prim">Limited</label>
+            <br>
+            <input type="checkbox" name="prim-rarity" value="rare-prim">
+            <label for="rare-prim">Rare</label>
+        </form>
+    </div>
 
-    <form id="prim-rarity" class="col-sm">
-        <input type="checkbox" name="prim-rarity" value="common-prim">
-        <label for="common-prim">Common</label>
-        <br>
-        <input type="checkbox" name="prim-rarity" value="uncommon-prim">
-        <label for="uncommon-prim">Uncommon</label>
-        <br>
-        <input type="checkbox" name="prim-rarity" value="limited-prim">
-        <label for="limited-prim">Limited</label>
-        <br>
-        <input type="checkbox" name="prim-rarity" value="rare-prim">
-        <label for="rare-prim">Rare</label>
-    </form>
+    <!-- secondary gene rarity -->
+    <div class="col-sm">
+        <form id="" class="box">
+            sec
+        </form>
+    </div>
 
-    <form id="" class="col-sm">
-        sec
-    </form>
-
-    <form id="" class="col-sm">
-        tert
-    </form>
+    <!-- tertiary gene rarity -->
+    <div class="col-sm">
+        <form id="" class="box">
+            tert
+        </form>
+    </div>
     
 </div>
 
