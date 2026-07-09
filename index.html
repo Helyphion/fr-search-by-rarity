@@ -16,7 +16,8 @@ body {
     background-color: #2e3440;
     color: #d8dee9;
     font-family: arial;
-    padding: 1rem
+    max-width: 50rem; 
+    margin: auto;
     /*transform: skewX(-1deg);   sometimes I just feel evil..*/
 }
 
@@ -36,32 +37,29 @@ body {
 <div class="row no-gutters">
 
     <!-- intro text -->
-    <div class="col-sm">
+    <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
             info
         </div>
     </div>
 
     <!-- utility toggles -->
-    <div class="col-sm">
+    <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
             util
         </div>
     </div>
 
     <!-- breed rarity -->
-    <div class="col-sm">
+    <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
             breeds
         </div>
     </div>
 
-</div>
 
-<!-- second row of boxes -->
-<div class="row no-gutters">
     <!-- primary gene rarity -->
-    <div class="col-sm">
+    <div class="col-12 col-sm-6 col-md-4">
         <form id="prim-rarity" class="box">
             <input type="checkbox" name="prim-rarity" value="common-prim">
             <label for="common-prim">Common</label>
@@ -78,14 +76,14 @@ body {
     </div>
 
     <!-- secondary gene rarity -->
-    <div class="col-sm">
+    <div class="col-12 col-sm-6 col-md-4">
         <form id="" class="box">
             sec
         </form>
     </div>
 
     <!-- tertiary gene rarity -->
-    <div class="col-sm">
+    <div class="col-12 col-sm-6 col-md-4">
         <form id="" class="box">
             tert
         </form>
