@@ -1,28 +1,16 @@
 function parseRarity() {
-    const primRarityCheckboxes = primRarity.elements;
-    console.log(primRarityCheckboxes);
+    console.log("TEST")
 
-    /*
-    for (const input of primRarityCheckboxes) {
-        if (input.nodeName === "INPUT" && input.type === "checkbox") {
-          console.log(input)
-        }
-      }
-    */
+    const test = new FormData(primRarityForm);
+    console.log(test.getAll("prim-rarity"));
+    // now if only I had made the json layout make more sense. lmao
 
-    // ughh I don't know man. I give up. (for now)
-    const formData = new FormData(primRarity);
-
-    // 2. Get all values associated with the checkbox name attribute
-    const selectedValues = formData.getAll("prim-rarity");
-    
-    console.log(selectedValues);
 }
 
 
-const primRarity = document.getElementById("prim-rarity");
-primRarity.addEventListener("change", parseRarity())
+const primRarityForm = document.getElementById("prim-rarity");
 
+primRarityForm.addEventListener("change", parseRarity)
 
 
 
@@ -30,4 +18,4 @@ primRarity.addEventListener("change", parseRarity())
 // remember that basic is id 0 lol
 
 // this is just for debugging bc my setup is.. janky rn:
-// document.body.style.backgroundColor = "black";
+document.body.style.backgroundColor = "black";
