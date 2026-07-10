@@ -16,7 +16,7 @@ body {
     background-color: #24273a;
     color: #cad3f5;
     font-family: arial;
-    max-width: 55rem; 
+    max-width: 50rem; 
     margin: auto;
     /*transform: skewX(-1deg);   sometimes I just feel evil..*/
 }
@@ -26,7 +26,7 @@ body {
     background-color: #1e2030;
     padding: 0.5rem;
     margin: 0.5rem;
-    height: 10rem;
+    height: 13.5rem;
 }
 
 .title {
@@ -42,7 +42,7 @@ body {
 
 .option {
     margin-bottom: -0.2rem;
-    margin-left: 0.2rem;
+    margin-left: 0.4rem;
 }
 
 .nav-pills .nav-link {
@@ -90,9 +90,29 @@ body {
                   <a class="nav-link" data-bs-toggle="pill" href="#ancient">Ancient</a>
             </nav>
               
-            <div class="tab-content">
-                <div class="tab-pane container active" id="modern">
-                    moderns selector
+            <div class="tab-content mt-2">
+                <div class="tab-pane active" id="modern">
+                    
+                    <form id="breed-rarity">
+
+                        <div class="option">
+                            <input type="checkbox" name="rarity" value="plentiful"> <label for="plentiful">Plentiful</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" name="rarity" value="uncommon"> <label for="uncommon">Uncommon</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" name="rarity" value="limited"> <label for="limited">Limited</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
+                        </div>
+                        
+                    </form>
+
                 </div>
                 <div class="tab-pane container fade" id="ancient">
                     ancients selector
