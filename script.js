@@ -1,3 +1,4 @@
+/*
 function parseRarity(givenForm) {
 
     const formContents = new FormData(givenForm);
@@ -6,24 +7,59 @@ function parseRarity(givenForm) {
     // now if only I had made the json layout make more sense. lmao
 
 }
+*/
+
+let geneDatabase;
+let breed = "modern"; //TODO: implement properly lol
+
+
+function updatePrim(givenForm) {
+    const formContents = new FormData(givenForm);
+    const activeRars = formContents.getAll("rarity");
+    console.log(formContents.getAll("rarity"));
+
+    for (let i = 0; i < activeRars.length; i++) {
+        console.log(activeRars[i])
+        console.log(geneDatabase.primary[activeRars[i]])
+        let currentGenesList = geneDatabase.primary[activeRars[i]];
+        console.log(Object.keys(currentGenesList).length)
+
+        for (let x = 0; x < Object.keys(currentGenesList).length; x++) {
+            // console.log(currentGenesList)
+        }
+
+        for (const [gene, breeds] of Object.entries(currentGenesList)) {
+            console.log(gene, breeds);
+
+            for (const test of Object.entries(breeds)) {
+                
+                if (test[0] == breed) {
+                    console.log(test[1])
+                } 
+                // don't ask me why this is an array instead of key: value, but hey it works I guess ??
+            }
+        }
+    }
+
+}
 
 async function getGeneIdsJson() {
     const response = await fetch("gene-rarities.json");
-    const geneIdsJson = await response.json();
-    console.log(geneIdsJson);
+    return await response.json();
 }
 
 
 async function main() {
 
-    const geneIdsJson = await getGeneIdsJson();
+    geneDatabase = await getGeneIdsJson();
 
     const primRarityForm = document.getElementById("prim-rarity");
-    primRarityForm.addEventListener("change", () => parseRarity(primRarityForm))
+    primRarityForm.addEventListener("change", () => updatePrim(primRarityForm))
+
     // arrow functions are necessary for parameters to work
 
 
-    
+
     // this is just for debugging bc my setup is.. janky rn:
     document.body.style.backgroundColor = "black";
 
