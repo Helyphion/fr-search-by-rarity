@@ -54,7 +54,7 @@ async function main() {
 
 
     // this is just for debugging bc my setup is.. janky rn:
-    document.body.style.backgroundColor = "black";
+    // document.body.style.backgroundColor = "black";
 
 }
 
