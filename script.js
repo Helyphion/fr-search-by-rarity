@@ -44,6 +44,12 @@ async function main() {
     const primRarityForm = document.getElementById("prim-rarity");
     primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm))
 
+    const secRarityForm = document.getElementById("sec-rarity");
+    secRarityForm.addEventListener("change", () => refreshActiveGenes("secondary", secRarityForm))
+
+    const tertRarityForm = document.getElementById("tert-rarity");
+    tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm))
+
     // arrow functions are necessary for parameters to work
 
 
