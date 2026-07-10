@@ -4,7 +4,7 @@ const searchButton = document.getElementById("testing");
 
 
 function refreshActiveGenes(geneSlot, givenForm) {
-    let searchString = "";
+    let searchFragment = "";
 
     const formContents = new FormData(givenForm);
     const checkedBoxes = formContents.getAll("rarity");
@@ -12,7 +12,7 @@ function refreshActiveGenes(geneSlot, givenForm) {
     for (let i = 0; i < checkedBoxes.length; i++) {
 
         if (checkedBoxes[i] == "basic") {
-            searchString += "0%2C"
+            searchFragment += "0%2C"
         }
         else {
             let currentGenesList = geneDatabase[geneSlot][checkedBoxes[i]];
@@ -23,7 +23,7 @@ function refreshActiveGenes(geneSlot, givenForm) {
 
                     if (breed === selectedBreed) {
                         // console.log(breeds[breed]);
-                        searchString += breeds[breed] + "%2C";
+                        searchFragment += breeds[breed] + "%2C";
                     }
 
                 }
@@ -33,11 +33,11 @@ function refreshActiveGenes(geneSlot, givenForm) {
 
     }
 
-    searchString = searchString.slice(0, -3);
-    console.log(searchString);
+    searchFragment = searchFragment.slice(0, -3);
+    console.log(searchFragment);
     // for testing only:
-    searchButton.textContent = searchString;
-    return searchString;
+    searchButton.textContent = searchFragment;
+    return searchFragment;
     // TODO: properly do something with searchString
     // maybe switch case for geneSlot to add the right search tag hmh
 }
@@ -75,5 +75,7 @@ main();
 // example link:
 // https://www1.flightrising.com/auction-house/buy/realm/dragons?d_gender=0&d_bodygene=110%2C10%2C213&d_winggene=0%2C213&d_tertgene=22&collapse=1
 // "and" combinator for several selections seems to be %2C
+
+// https://www1.flightrising.com/auction-house/buy/realm/dragons?{searchString}collapse=1
 
 // remember that basic is id 0 lol
