@@ -1,5 +1,6 @@
 let geneDatabase;
 let selectedBreed = "modern"; //TODO: implement properly lol
+const searchButton = document.getElementById("testing");
 
 
 function refreshActiveGenes(geneSlot, givenForm) {
@@ -10,25 +11,35 @@ function refreshActiveGenes(geneSlot, givenForm) {
 
     for (let i = 0; i < checkedBoxes.length; i++) {
 
-        let currentGenesList = geneDatabase[geneSlot][checkedBoxes[i]];
-        for (const [gene, breeds] of Object.entries(currentGenesList)) {
-            
-            // console.log(gene, breeds);
-            for (const breed of Object.keys(breeds)) {
+        if (checkedBoxes[i] == "basic") {
+            searchString += "0%2C"
+        }
+        else {
+            let currentGenesList = geneDatabase[geneSlot][checkedBoxes[i]];
+            for (const [gene, breeds] of Object.entries(currentGenesList)) {
+                
+                // console.log(gene, breeds);
+                for (const breed of Object.keys(breeds)) {
 
-                if (breed === selectedBreed) {
-                    // console.log(breeds[breed]);
-                    searchString += breeds[breed] + "%2C";
-                } 
+                    if (breed === selectedBreed) {
+                        // console.log(breeds[breed]);
+                        searchString += breeds[breed] + "%2C";
+                    }
+
+                }
 
             }
         }
+
     }
 
     searchString = searchString.slice(0, -3);
     console.log(searchString);
+    // for testing only:
+    searchButton.textContent = searchString;
     return searchString;
-    // TODO: do something with searchString
+    // TODO: properly do something with searchString
+    // maybe switch case for geneSlot to add the right search tag hmh
 }
 
 async function getGeneIdsJson() {
