@@ -1,46 +1,34 @@
-/*
-function parseRarity(givenForm) {
-
-    const formContents = new FormData(givenForm);
-    console.log(formContents.getAll("rarity"));
-    // howw.. do I get this data out of here 
-    // now if only I had made the json layout make more sense. lmao
-
-}
-*/
-
 let geneDatabase;
-let breed = "modern"; //TODO: implement properly lol
+let selectedBreed = "modern"; //TODO: implement properly lol
 
 
-function updatePrim(givenForm) {
+function refreshActiveGenes(geneSlot, givenForm) {
+    let searchString = "";
+
     const formContents = new FormData(givenForm);
-    const activeRars = formContents.getAll("rarity");
-    console.log(formContents.getAll("rarity"));
+    const checkedBoxes = formContents.getAll("rarity");
 
-    for (let i = 0; i < activeRars.length; i++) {
-        console.log(activeRars[i])
-        console.log(geneDatabase.primary[activeRars[i]])
-        let currentGenesList = geneDatabase.primary[activeRars[i]];
-        console.log(Object.keys(currentGenesList).length)
+    for (let i = 0; i < checkedBoxes.length; i++) {
 
-        for (let x = 0; x < Object.keys(currentGenesList).length; x++) {
-            // console.log(currentGenesList)
-        }
-
+        let currentGenesList = geneDatabase[geneSlot][checkedBoxes[i]];
         for (const [gene, breeds] of Object.entries(currentGenesList)) {
-            console.log(gene, breeds);
+            
+            // console.log(gene, breeds);
+            for (const breed of Object.keys(breeds)) {
 
-            for (const test of Object.entries(breeds)) {
-                
-                if (test[0] == breed) {
-                    console.log(test[1])
+                if (breed === selectedBreed) {
+                    // console.log(breeds[breed]);
+                    searchString += breeds[breed] + "%2C";
                 } 
-                // don't ask me why this is an array instead of key: value, but hey it works I guess ??
+
             }
         }
     }
 
+    searchString = searchString.slice(0, -3);
+    console.log(searchString);
+    return searchString;
+    // TODO: do something with searchString
 }
 
 async function getGeneIdsJson() {
@@ -54,7 +42,7 @@ async function main() {
     geneDatabase = await getGeneIdsJson();
 
     const primRarityForm = document.getElementById("prim-rarity");
-    primRarityForm.addEventListener("change", () => updatePrim(primRarityForm))
+    primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm))
 
     // arrow functions are necessary for parameters to work
 
