@@ -1,0 +1,47 @@
+{
+"modern": {
+    "plentiful": {
+        "fae": 1,
+        "guardian": 2,
+        "mirror": 3,
+        "tundra": 6
+    },
+    "common": {
+        "pearlcatcher": 4,
+        "ridgeback": 5,
+        "snapper": 9,
+        "spiral": 7
+    },
+    "uncommon": {
+        "skydancer": 13,
+        "bogsneak": 14,
+        "obelisk": 15,
+        "fathom": 16
+    },
+    "limited": {
+        "imperial": 8,
+        "nocturne": 11
+    },
+    "rare": {
+        "coatl": 12,
+        "wildclaw": 10
+    }
+},
+
+"ancient": {
+    "aberration": 20,
+    "aether": 22,
+    "auraboa": 24,
+    "banescale": 18,
+    "cirrus": 27,
+    "dusthide": 25,
+    "everlux": 26,
+    "gaoler": 17,
+    "sandsurge": 23,
+    "thorntail": 29,
+    "undertide": 21,
+    "veilspun": 19,
+    "vigil": 28
+}
+
+}
