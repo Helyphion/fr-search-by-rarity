@@ -3,9 +3,12 @@ let breedDatabase;
 let selectedBreed = "modern"; //TODO: implement properly lol
 const searchButton = document.getElementById("testing");
 
-let primSearchString = "";
-let secSearchString = "";
-let tertSearchString = "";
+const searchStrings = {
+    d_breed: "",
+    d_bodygene: "",
+    d_winggene: "",
+    d_tertgene: ""
+};
 
 
 async function fetchJsonData(file) {
@@ -21,15 +24,31 @@ function refreshActiveBreed(givenForm) {
     const activeTabName = activeTab.textContent.toLowerCase();
 
     if (activeTabName === "modern") {
-
         selectedBreed = "modern";
 
         const formContents = new FormData(givenForm);
         const checkedBoxes = formContents.getAll("rarity");
 
+        for (let i = 0; i < checkedBoxes.length; i++) {
+
+            let currentRarity = breedDatabase["modern"][checkedBoxes[i]]
+
+            for (const breed of Object.keys(currentRarity)) {
+                searchFragment += currentRarity[breed] + "%2C";
+            }
+
+        }
+
     } else if (activeTabName === "ancient") {
 
     }
+
+    searchFragment = searchFragment.slice(0, -3);
+    searchStrings.d_breed = searchFragment;
+    console.log(searchFragment);
+
+    // for testing only:
+    searchButton.textContent = searchStrings.d_breed + "&"
 }
 
 function refreshActiveGenes(geneSlot, givenForm) {
@@ -44,8 +63,8 @@ function refreshActiveGenes(geneSlot, givenForm) {
             searchFragment += "0%2C"
         }
         else {
-            let currentGenesList = geneDatabase[geneSlot][checkedBoxes[i]];
-            for (const [gene, breeds] of Object.entries(currentGenesList)) {
+            let currentRarity = geneDatabase[geneSlot][checkedBoxes[i]];
+            for (const [gene, breeds] of Object.entries(currentRarity)) {
                 
                 // console.log(gene, breeds);
                 for (const breed of Object.keys(breeds)) {
@@ -64,26 +83,26 @@ function refreshActiveGenes(geneSlot, givenForm) {
 
     searchFragment = searchFragment.slice(0, -3);
     console.log(searchFragment);
-    // for testing only:
-    searchButton.textContent = searchFragment;
 
     // write assembled searchFragment to global variables
     switch (geneSlot) {
         case "primary":
-            primSearchString = searchFragment;
+            searchStrings.d_bodygene = searchFragment;
             break;
         case "secondary":
-            secSearchString = searchFragment;
+            searchStrings.d_winggene = searchFragment;
             break;
         case "tertiary":
-            tertSearchString = searchFragment;
+            searchStrings.d_tertgene = searchFragment;
             break;
     }
 
     // TODO: once implementing properly, make it so it only adds if not blank
-    searchButton.textContent = "d_bodygene=" + primSearchString + "&"
-                            + "d_winggene=" + secSearchString + "&"
-                            + "d_tertgene=" + tertSearchString + "&";
+    // and also use a for loop instead
+    // and have it not be in this function
+    searchButton.textContent = searchStrings.d_bodygene + "&"
+                            + searchStrings.d_winggene + "&"
+                            + searchStrings.d_tertgene + "&"
 
 }
 
