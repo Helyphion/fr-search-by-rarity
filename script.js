@@ -1,9 +1,10 @@
 let geneDatabase;
 let breedDatabase;
-let selectedBreed = "modern"; //TODO: implement properly lol
+let selectedBreed = "modern";
 const searchButton = document.getElementById("testing");
 
-const searchStrings = {
+let searchString = "";
+const fragmentStorage = {
     d_breed: "",
     d_bodygene: "",
     d_winggene: "",
@@ -39,20 +40,25 @@ function refreshActiveBreed(givenForm) {
 
         }
 
+        searchFragment = searchFragment.slice(0, -3);
+        fragmentStorage.d_breed = searchFragment;
+
+
     } else if (activeTabName === "ancient") {
 
+        const formContents = new FormData(givenForm);
+        selectedBreed = formContents.get("breed");
+        console.log(selectedBreed)
+
+        fragmentStorage.d_breed = "";
     }
 
-    searchFragment = searchFragment.slice(0, -3);
-    searchStrings.d_breed = searchFragment;
-    console.log(searchFragment);
-
-    // for testing only:
-    searchButton.textContent = searchStrings.d_breed + "&"
+    assembleSearchLink();
 }
 
 function refreshActiveGenes(geneSlot, givenForm) {
     let searchFragment = "";
+    console.log(selectedBreed)
 
     const formContents = new FormData(givenForm);
     const checkedBoxes = formContents.getAll("rarity");
@@ -87,23 +93,30 @@ function refreshActiveGenes(geneSlot, givenForm) {
     // write assembled searchFragment to global variables
     switch (geneSlot) {
         case "primary":
-            searchStrings.d_bodygene = searchFragment;
+            fragmentStorage.d_bodygene = searchFragment;
             break;
         case "secondary":
-            searchStrings.d_winggene = searchFragment;
+            fragmentStorage.d_winggene = searchFragment;
             break;
         case "tertiary":
-            searchStrings.d_tertgene = searchFragment;
+            fragmentStorage.d_tertgene = searchFragment;
             break;
     }
 
-    // TODO: once implementing properly, make it so it only adds if not blank
-    // and also use a for loop instead
-    // and have it not be in this function
-    searchButton.textContent = searchStrings.d_bodygene + "&"
-                            + searchStrings.d_winggene + "&"
-                            + searchStrings.d_tertgene + "&"
+    assembleSearchLink();
+}
 
+
+function assembleSearchLink() {
+    searchString = ""
+
+    for (const [key, value] of Object.entries(fragmentStorage)) {
+        if (value !== "") {
+            console.log(key)
+            searchString += key + "=" + value + "&"
+        }
+    }
+    searchButton.textContent = searchString;
 }
 
 
@@ -122,9 +135,14 @@ async function main() {
     tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm))
     // arrow functions are necessary for parameters to work
 
+
     const breedRarityForm = document.getElementById("breed-rarity");
     breedRarityForm.addEventListener("change", () => refreshActiveBreed(breedRarityForm))
 
+    const ancientBreedForm = document.getElementById("ancient-breed");
+    ancientBreedForm.addEventListener("change", () => refreshActiveBreed(ancientBreedForm))
+
+    // TODO: need event listener for tabs being changed without new boxes being selected!!
 
     // this is just for debugging bc my setup is.. janky rn:
     // document.body.style.backgroundColor = "black";
