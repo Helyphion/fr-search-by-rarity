@@ -2,6 +2,10 @@ let geneDatabase;
 let selectedBreed = "modern"; //TODO: implement properly lol
 const searchButton = document.getElementById("testing");
 
+let primSearchString = "";
+let secSearchString = "";
+let tertSearchString = "";
+
 
 function refreshActiveGenes(geneSlot, givenForm) {
     let searchFragment = "";
@@ -37,9 +41,25 @@ function refreshActiveGenes(geneSlot, givenForm) {
     console.log(searchFragment);
     // for testing only:
     searchButton.textContent = searchFragment;
-    return searchFragment;
-    // TODO: properly do something with searchString
-    // maybe switch case for geneSlot to add the right search tag hmh
+
+    // write assembled searchFragment to global variables
+    switch (geneSlot) {
+        case "primary":
+            primSearchString = searchFragment;
+            break;
+        case "secondary":
+            secSearchString = searchFragment;
+            break;
+        case "tertiary":
+            tertSearchString = searchFragment;
+            break;
+    }
+
+    // TODO: once implementing properly, make it so it only adds if not blank
+    searchButton.textContent = "d_bodygene=" + primSearchString + "&"
+                            + "d_winggene=" + secSearchString + "&"
+                            + "d_tertgene=" + tertSearchString + "&";
+
 }
 
 async function getGeneIdsJson() {
