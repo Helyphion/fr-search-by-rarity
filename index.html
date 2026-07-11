@@ -29,6 +29,15 @@ body {
     height: 13.5rem;
 }
 
+.gene-box {
+    height: 10rem;
+}
+
+.basic-box {
+    height: 3rem;
+    align-content: center;
+}
+
 .title {
     font-size: 1.3rem;
     font-weight: 600;
@@ -38,6 +47,7 @@ body {
     border-bottom: 0.1rem solid #8087a2;
     color: #f5a97f;
     padding-left: 0.1rem;
+    margin-top: 0.1rem;
 }
 
 .option {
@@ -125,7 +135,7 @@ body {
 
     <!-- primary gene rarity -->
     <div class="col-12 col-sm-6 col-md-4">
-        <div class="box">
+        <div class="box gene-box">
 
             <div class="title">Primary Rarity</div>
             <form id="prim-rarity">
@@ -142,13 +152,14 @@ body {
                 <div class="option">
                     <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
                 </div>
-                <hr style="margin:0.3rem 0rem;">
-                <div class="option">
-                    <input type="checkbox" name="rarity" value="basic"> <label for="basic">Basic</label>
-                </div>
                 
             </form>
 
+        </div>
+        <div class="box basic-box">
+            <div class="option">
+                <input type="checkbox" name="rarity" value="basic"> <label for="basic">Basic</label>
+            </div>
         </div>
     </div>
 
@@ -212,6 +223,7 @@ body {
     
 </div>
 
+<br>
 <button type="button" class="btn btn-outline-secondary">Search</button>
 <div id="testing">result</div>
 
