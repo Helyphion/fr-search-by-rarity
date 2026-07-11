@@ -1,4 +1,5 @@
 let geneDatabase;
+let breedDatabase;
 let selectedBreed = "modern"; //TODO: implement properly lol
 const searchButton = document.getElementById("testing");
 
@@ -6,6 +7,30 @@ let primSearchString = "";
 let secSearchString = "";
 let tertSearchString = "";
 
+
+async function fetchJsonData(file) {
+    const response = await fetch(file);
+    return await response.json();
+}
+
+
+function refreshActiveBreed(givenForm) {
+    let searchFragment = "";
+
+    const activeTab = document.querySelector(".nav-pills .nav-link.active");
+    const activeTabName = activeTab.textContent.toLowerCase();
+
+    if (activeTabName === "modern") {
+
+        selectedBreed = "modern";
+
+        const formContents = new FormData(givenForm);
+        const checkedBoxes = formContents.getAll("rarity");
+
+    } else if (activeTabName === "ancient") {
+
+    }
+}
 
 function refreshActiveGenes(geneSlot, givenForm) {
     let searchFragment = "";
@@ -62,15 +87,11 @@ function refreshActiveGenes(geneSlot, givenForm) {
 
 }
 
-async function getGeneIdsJson() {
-    const response = await fetch("gene-rarities.json");
-    return await response.json();
-}
-
 
 async function main() {
 
-    geneDatabase = await getGeneIdsJson();
+    geneDatabase = await fetchJsonData("gene-rarities.json");
+    breedDatabase = await fetchJsonData("breed-rarities.json");
 
     const primRarityForm = document.getElementById("prim-rarity");
     primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm))
@@ -82,6 +103,8 @@ async function main() {
     tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm))
     // arrow functions are necessary for parameters to work
 
+    const breedRarityForm = document.getElementById("breed-rarity");
+    breedRarityForm.addEventListener("change", () => refreshActiveBreed(breedRarityForm))
 
 
     // this is just for debugging bc my setup is.. janky rn:
