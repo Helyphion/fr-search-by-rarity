@@ -1,5 +1,6 @@
 # Temporary local data
 /Gene\ Database\ Builder/output.json
+temp.py
 
 # VSCode config info
 *.code-workspace
