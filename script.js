@@ -6,7 +6,10 @@ const fragmentStorage = {
     d_breed: "",
     d_bodygene: "",
     d_winggene: "",
-    d_tertgene: ""
+    d_tertgene: "",
+    d_gender: "",
+    d_rtb: "",
+    d_gen1: "0"
 };
 
 let selectedBreed = "modern";
@@ -19,6 +22,8 @@ const tertRarityForm = document.getElementById("tert-rarity");
 
 const breedRarityForm = document.getElementById("breed-rarity");
 const ancientBreedForm = document.getElementById("ancient-breed");
+
+const utilityForm = document.getElementById("utilities");
 
 
 
@@ -72,7 +77,6 @@ function refreshActiveBreed(givenForm) {
 
 function refreshActiveGenes(geneSlot, givenForm) {
     let searchFragment = "";
-    console.log(selectedBreed)
 
     const formContents = new FormData(givenForm);
     const checkedBoxes = formContents.getAll("rarity");
@@ -121,6 +125,32 @@ function refreshActiveGenes(geneSlot, givenForm) {
 }
 
 
+function refreshUtilities() {
+
+    const formContents = new FormData(utilityForm);
+
+    const chosenGenders = formContents.getAll("gender");
+    const gen1Choice = formContents.get("g1");
+    const rtbChoice = formContents.get("breeding-status");
+
+    if (chosenGenders.length === 1) {
+        // if only one is chosen, sets gender id to 0 if male, or 1 if female
+        chosenGenders[0] === "male" ? fragmentStorage.d_gender = "0" : fragmentStorage.d_gender = "1";
+    } else {
+        fragmentStorage.d_gender = "";
+    }
+
+    // clears filter if include g1s requested, sets to g2+ only if not
+    gen1Choice === "include" ? fragmentStorage.d_gen1 = "" : fragmentStorage.d_gen1 = "0";
+    console.log(fragmentStorage.d_gen1)
+
+    // sets 1 if rtb requested, clears if not
+    rtbChoice === "rtb" ? fragmentStorage.d_rtb = "1" : fragmentStorage.d_rtb = "";
+
+    assembleSearchLink()
+}
+
+
 function assembleSearchLink() {
     searchString = ""
 
@@ -144,18 +174,20 @@ async function main() {
     geneDatabase = await fetchJsonData("gene-rarities.json");
     breedDatabase = await fetchJsonData("breed-rarities.json");
 
-    primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm))
-    secRarityForm.addEventListener("change", () => refreshActiveGenes("secondary", secRarityForm))
-    tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm))
+    primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm));
+    secRarityForm.addEventListener("change", () => refreshActiveGenes("secondary", secRarityForm));
+    tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm));
     // arrow functions are necessary for parameters to work
 
-    breedRarityForm.addEventListener("change", () => refreshActiveBreed())
-    ancientBreedForm.addEventListener("change", () => refreshActiveBreed())
+    breedRarityForm.addEventListener("change", () => refreshActiveBreed());
+    ancientBreedForm.addEventListener("change", () => refreshActiveBreed());
+
+    utilityForm.addEventListener("change", () => refreshUtilities());
 
 
     const tabButtons = document.getElementsByClassName("nav-link");
-    tabButtons[0].addEventListener("shown.bs.tab", () => refreshActiveBreed())
-    tabButtons[1].addEventListener("shown.bs.tab", () => refreshActiveBreed())
+    tabButtons[0].addEventListener("shown.bs.tab", () => refreshActiveBreed());
+    tabButtons[1].addEventListener("shown.bs.tab", () => refreshActiveBreed());
 
 }
 
