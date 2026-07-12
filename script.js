@@ -63,9 +63,10 @@ function refreshActiveBreed(givenForm) {
         fragmentStorage.d_breed = "";
     }
 
-    // TODO: I.. forgot this needs arguments. hm
-    // need to unify it.. somehow ?????
-    refreshActiveGenes();
+    // reload all gene IDs when breed is changed
+    refreshActiveGenes("primary", primRarityForm);
+    refreshActiveGenes("secondary", secRarityForm);
+    refreshActiveGenes("tertiary", tertRarityForm);
 }
 
 
@@ -129,8 +130,11 @@ function assembleSearchLink() {
             searchString += key + "=" + value + "&"
         }
     }
+    // set link if any parameters are given; clear it if not
     if (searchString !== "") {
         searchButton.textContent = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
+    } else {
+        searchButton.textContent = ":(";
     }
 }
 
@@ -148,16 +152,10 @@ async function main() {
     breedRarityForm.addEventListener("change", () => refreshActiveBreed())
     ancientBreedForm.addEventListener("change", () => refreshActiveBreed())
 
-    
-    // TODO: need event listener for tabs being changed without new boxes being selected!!
+
     const tabButtons = document.getElementsByClassName("nav-link");
-    tabButtons[0].addEventListener("change", () => refreshActiveBreed())
-    tabButtons[1].addEventListener("change", () => refreshActiveBreed())
-
-    console.log(tabButtons)
-
-    // this is just for debugging bc my setup is.. janky rn:
-    // document.body.style.backgroundColor = "black";
+    tabButtons[0].addEventListener("shown.bs.tab", () => refreshActiveBreed())
+    tabButtons[1].addEventListener("shown.bs.tab", () => refreshActiveBreed())
 
 }
 
@@ -169,5 +167,3 @@ main();
 // "and" combinator for several selections seems to be %2C
 
 // https://www1.flightrising.com/auction-house/buy/realm/dragons?{searchString}collapse=1
-
-// remember that basic is id 0 lol
