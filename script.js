@@ -116,7 +116,10 @@ function assembleSearchLink() {
             searchString += key + "=" + value + "&"
         }
     }
-    searchButton.textContent = searchString;
+    
+    if (searchString !== "") {
+        searchButton.textContent = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
+    }
 }
 
 
