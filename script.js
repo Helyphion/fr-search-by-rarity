@@ -9,7 +9,7 @@ const fragmentStorage = {
     d_tertgene: "",
     d_gender: "",
     d_rtb: "",
-    d_gen1: "0"
+    d_gen1: ""
 };
 
 let selectedBreed = "modern";
@@ -121,7 +121,7 @@ function refreshActiveGenes(geneSlot, givenForm) {
             break;
     }
 
-    assembleSearchLink();
+    refreshUtilities();
 }
 
 
@@ -141,7 +141,7 @@ function refreshUtilities() {
     }
 
     // clears filter if include g1s requested, sets to g2+ only if not
-    gen1Choice === "include" ? fragmentStorage.d_gen1 = "" : fragmentStorage.d_gen1 = "0";
+    gen1Choice === "exclude" ? fragmentStorage.d_gen1 = "0" : fragmentStorage.d_gen1 = "";
     console.log(fragmentStorage.d_gen1)
 
     // sets 1 if rtb requested, clears if not
