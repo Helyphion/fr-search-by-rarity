@@ -1,7 +1,5 @@
 let geneDatabase;
 let breedDatabase;
-let selectedBreed = "modern";
-const searchButton = document.getElementById("testing");
 
 let searchString = "";
 const fragmentStorage = {
@@ -10,6 +8,18 @@ const fragmentStorage = {
     d_winggene: "",
     d_tertgene: ""
 };
+
+let selectedBreed = "modern";
+const searchButton = document.getElementById("testing"); // wip
+
+
+const primRarityForm = document.getElementById("prim-rarity");
+const secRarityForm = document.getElementById("sec-rarity");
+const tertRarityForm = document.getElementById("tert-rarity");
+
+const breedRarityForm = document.getElementById("breed-rarity");
+const ancientBreedForm = document.getElementById("ancient-breed");
+
 
 
 async function fetchJsonData(file) {
@@ -27,7 +37,7 @@ function refreshActiveBreed(givenForm) {
     if (activeTabName === "modern") {
         selectedBreed = "modern";
 
-        const formContents = new FormData(givenForm);
+        const formContents = new FormData(breedRarityForm);
         const checkedBoxes = formContents.getAll("rarity");
 
         for (let i = 0; i < checkedBoxes.length; i++) {
@@ -46,15 +56,18 @@ function refreshActiveBreed(givenForm) {
 
     } else if (activeTabName === "ancient") {
 
-        const formContents = new FormData(givenForm);
+        const formContents = new FormData(ancientBreedForm);
         selectedBreed = formContents.get("breed");
         console.log(selectedBreed)
 
         fragmentStorage.d_breed = "";
     }
 
-    assembleSearchLink();
+    // TODO: I.. forgot this needs arguments. hm
+    // need to unify it.. somehow ?????
+    refreshActiveGenes();
 }
+
 
 function refreshActiveGenes(geneSlot, givenForm) {
     let searchFragment = "";
@@ -116,7 +129,6 @@ function assembleSearchLink() {
             searchString += key + "=" + value + "&"
         }
     }
-    
     if (searchString !== "") {
         searchButton.textContent = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
     }
@@ -128,24 +140,21 @@ async function main() {
     geneDatabase = await fetchJsonData("gene-rarities.json");
     breedDatabase = await fetchJsonData("breed-rarities.json");
 
-    const primRarityForm = document.getElementById("prim-rarity");
     primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm))
-
-    const secRarityForm = document.getElementById("sec-rarity");
     secRarityForm.addEventListener("change", () => refreshActiveGenes("secondary", secRarityForm))
-
-    const tertRarityForm = document.getElementById("tert-rarity");
     tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm))
     // arrow functions are necessary for parameters to work
 
+    breedRarityForm.addEventListener("change", () => refreshActiveBreed())
+    ancientBreedForm.addEventListener("change", () => refreshActiveBreed())
 
-    const breedRarityForm = document.getElementById("breed-rarity");
-    breedRarityForm.addEventListener("change", () => refreshActiveBreed(breedRarityForm))
-
-    const ancientBreedForm = document.getElementById("ancient-breed");
-    ancientBreedForm.addEventListener("change", () => refreshActiveBreed(ancientBreedForm))
-
+    
     // TODO: need event listener for tabs being changed without new boxes being selected!!
+    const tabButtons = document.getElementsByClassName("nav-link");
+    tabButtons[0].addEventListener("change", () => refreshActiveBreed())
+    tabButtons[1].addEventListener("change", () => refreshActiveBreed())
+
+    console.log(tabButtons)
 
     // this is just for debugging bc my setup is.. janky rn:
     // document.body.style.backgroundColor = "black";
