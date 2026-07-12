@@ -6,7 +6,10 @@ const fragmentStorage = {
     d_breed: "",
     d_bodygene: "",
     d_winggene: "",
-    d_tertgene: "",
+    d_tertgene: ""
+};
+
+const utilFragmentStorage = {
     d_gender: "",
     d_rtb: "",
     d_gen1: ""
@@ -135,17 +138,17 @@ function refreshUtilities() {
 
     if (chosenGenders.length === 1) {
         // if only one is chosen, sets gender id to 0 if male, or 1 if female
-        chosenGenders[0] === "male" ? fragmentStorage.d_gender = "0" : fragmentStorage.d_gender = "1";
+        chosenGenders[0] === "male" ? utilFragmentStorage.d_gender = "0" : utilFragmentStorage.d_gender = "1";
     } else {
-        fragmentStorage.d_gender = "";
+        utilFragmentStorage.d_gender = "";
     }
 
-    // clears filter if include g1s requested, sets to g2+ only if not
-    gen1Choice === "exclude" ? fragmentStorage.d_gen1 = "0" : fragmentStorage.d_gen1 = "";
-    console.log(fragmentStorage.d_gen1)
+    // sets to g2+ only if exclude g1s requested, clears if not
+    gen1Choice === "exclude" ? utilFragmentStorage.d_gen1 = "0" : utilFragmentStorage.d_gen1 = "";
+    console.log(utilFragmentStorage.d_gen1)
 
     // sets 1 if rtb requested, clears if not
-    rtbChoice === "rtb" ? fragmentStorage.d_rtb = "1" : fragmentStorage.d_rtb = "";
+    rtbChoice === "rtb" ? utilFragmentStorage.d_rtb = "1" : utilFragmentStorage.d_rtb = "";
 
     assembleSearchLink()
 }
@@ -162,7 +165,15 @@ function assembleSearchLink() {
     }
     // set link if any parameters are given; clear it if not
     if (searchString !== "") {
+
+        for (const [key, value] of Object.entries(utilFragmentStorage)) {
+            if (value !== "") {
+                console.log(key)
+                searchString += key + "=" + value + "&"
+            }
+        }
         searchButton.textContent = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
+
     } else {
         searchButton.textContent = ":(";
     }
@@ -188,6 +199,11 @@ async function main() {
     const tabButtons = document.getElementsByClassName("nav-link");
     tabButtons[0].addEventListener("shown.bs.tab", () => refreshActiveBreed());
     tabButtons[1].addEventListener("shown.bs.tab", () => refreshActiveBreed());
+
+
+    // Bootstrap code for initialising tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 }
 
