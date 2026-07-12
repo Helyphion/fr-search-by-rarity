@@ -34,7 +34,7 @@ body {
     font-weight: 600;
     letter-spacing: -1px;
     padding-bottom: 0.3rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
     border-bottom: 0.1rem solid #8087a2;
     color: #f5a97f;
     padding-left: 0.1rem;
@@ -48,7 +48,7 @@ body {
 .nav-pills .nav-link {
     color: #8087a2;
     padding: 0.2rem;
-    margin: -0.1rem;
+    margin-bottom: -0.1rem;
 }
 
 .nav-pills .nav-link.active {
@@ -76,7 +76,26 @@ body {
     <!-- utility toggles -->
     <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
-            util
+            
+            <div class="title">Utilities</div>
+
+            <form id="utilities">
+                <div class="option">
+                    <input type="checkbox" name="gender" value="male" checked="true"> <label for="male">Male</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="gender" value="female" checked="true"> <label for="female">Female</label>
+                </div>
+                <hr style="margin:0.5rem 0rem;">
+                <div class="option">
+                    <input type="checkbox" name="g1" value="include"> <label for="include">Include G1s</label>
+                </div>
+                <hr style="margin:0.5rem 0rem;">
+                <div class="option">
+                    <input type="checkbox" name="breeding-status" value="rtb"> <label for="rtb">Ready to breed only</label>
+                </div>
+            </form>
+            
         </div>
     </div>
 
