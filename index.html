@@ -40,6 +40,16 @@ body {
     padding-left: 0.1rem;
 }
 
+.info-text {
+    overflow: auto;
+    max-height: 9rem;
+    line-height: 1.3rem;
+}
+
+.last-updated {
+    font-size: 0.8rem;
+}
+
 .option {
     margin-bottom: -0.2rem;
     margin-left: 0.4rem;
@@ -55,6 +65,16 @@ body {
   color: #1e2030;
   background-color: #f5a97f;
 }
+
+.footer {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #8087a2;
+}
+
+a {
+    color: #f5a97f;
+}
 </style>
 </head>
 
@@ -68,8 +88,22 @@ body {
     <!-- intro text -->
     <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
-            info
             
+            <div class="title">What's this?</div>
+            
+            <div class="info-text">
+                If you've ever wanted to make a breeding pair with genes of equal rarities, but didn't feel like manually selecting them all from the dropdowns, this is for you!
+                
+                <div class="last-updated" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme="light"
+                data-bs-title="launched site">
+                <span style="font-weight:bold; color:#f5a97f">Last updated:</span> 12-07-2026
+                </div>
+
+                <hr style="margin:0.5rem 0rem;">
+
+                wip...
+            </div>
+
         </div>
     </div>
 
@@ -80,6 +114,7 @@ body {
             <div class="title">Utilities</div>
 
             <form id="utilities">
+                <!-- gender -->
                 <div class="option">
                     <input type="checkbox" name="gender" value="male" checked="true"> <label for="male">Male</label>
                 </div>
@@ -87,10 +122,12 @@ body {
                     <input type="checkbox" name="gender" value="female" checked="true"> <label for="female">Female</label>
                 </div>
                 <hr style="margin:0.5rem 0rem;">
+                <!-- g1 / gen1 status -->
                 <div class="option">
                     <input type="checkbox" name="g1" value="exclude" checked="true"> <label for="exclude">Exclude G1s</label>
                 </div>
                 <hr style="margin:0.5rem 0rem;">
+                <!-- rtb status -->
                 <div class="option">
                     <input type="checkbox" name="breeding-status" value="rtb"> <label for="rtb">Ready to breed only</label>
                 </div>
@@ -279,8 +316,12 @@ body {
     
 </div>
 
+<div class="footer">site maintained by <a href="https://www1.flightrising.com/clan-profile/676173" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme="light"
+    data-bs-title="please contact me if there's any issues with the site!">Schmelios #676173</a></div>
+
 <button type="button" class="btn btn-outline-secondary">Search</button>
 <div id="testing">result</div>
+
 
 <script src="script.js"></script>
 <!-- Bootstrap -->
