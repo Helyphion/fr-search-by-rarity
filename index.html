@@ -17,13 +17,22 @@ body {
     background-color: #24273a;
     color: #cad3f5;
     font-family: arial;
-    max-width: 50rem; 
+    max-width: 55rem; 
     margin: auto;
     /*transform: skewX(-1deg);   sometimes I just feel evil..*/
 }
 
 a {
     color: #f5a97f;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #f5a97f;
+    margin-top: 3rem;
+    margin-bottom: 0.6rem;
 }
 
 .box {
@@ -103,7 +112,10 @@ a {
 
 <body>
 
-<!-- first row of boxes-->
+<div class="page-title">
+    FR Search by Rarity
+</div>
+
 <div class="row g-0">
 
     <!-- intro text -->
@@ -374,8 +386,9 @@ a {
 <div class="footer">site maintained by <a href="https://www1.flightrising.com/clan-profile/676173" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme="light"
     data-bs-title="please contact me if there's any issues with the site!">Schmelios #676173</a></div>
 
-<a class="btn btn-outline-secondary disabled" id="search-button">Search</a>
-<div id="testing">result</div>
+<div style="text-align:center; margin-bottom:2rem;">
+<a class="btn btn-outline-secondary btn-lg disabled" id="search-button">Search</a>
+</div>
 
 
 <script src="script.js"></script>
