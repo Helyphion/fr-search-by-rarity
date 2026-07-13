@@ -46,23 +46,22 @@ a {
     padding-left: 0.1rem;
 }
 
-.info-text {
-    overflow: auto;
-    max-height: 9rem;
-    line-height: 1.3rem;
-}
-
 .clear-all-button {
     position: absolute;
     right: 0.8rem;
     top: 0.7rem;
-    height:1.5rem;
-    width:1.5em;
+    height: 1.5rem;
+    width: 1.5em;
     color: #8087a2;
     background-color: #24273a;
-    border:1px solid #8087a2;
-    border-radius:0.2rem;
-    text-align:center;
+    border: 1px solid #8087a2;
+    border-radius: 0.2rem;
+    text-align: center;
+}
+
+.clear-all-button:hover {
+    background-color: #8087a2;
+    color: #24273a;
 }
 
 .option {
@@ -79,6 +78,16 @@ a {
 .nav-pills .nav-link.active {
   color: #1e2030;
   background-color: #f5a97f;
+}
+
+.info-text {
+    overflow: auto;
+    max-height: 9rem;
+    line-height: 1.3rem;
+}
+
+.hints {
+    font-size: 0.9rem;
 }
 
 .footer {
@@ -105,7 +114,6 @@ a {
             
             <div class="info-text">
                 If you've ever wanted to make a breeding pair with genes of equal rarities, but didn't feel like manually selecting them all from the dropdowns, this is for you!
-                
                 <div class="last-updated" style="font-size: 0.8rem;" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme="light"
                 data-bs-title="launched site">
                 <span style="font-weight:bold; color:#f5a97f">› Last updated:</span> 12-07-2026
@@ -113,13 +121,21 @@ a {
 
                 <hr style="margin:0.5rem 0rem;">
 
-                <div class="row g-0" style="font-size:0.9rem;">
+                <div class="hints">
+                Sections without any boxes checked are not added to the search filter, so leaving them empty is functionally identical to selecting every option.</li>
+                </div>
+                <div class="hints">
+                Use the trashcan icon to clear all boxes in a section at once!
+                </div>
 
-                    <div class="col">
+                <hr style="margin:0.5rem 0rem;">
+
+                <div class="row g-0" style="font-size:0.8rem;">
+
+                    <div>
                         <!-- TODO: ,, make a forum thread -->
-                        <a href="" target="_blank"><i class="fa-solid fa-book fa-lg" style="color: #cad3f5;"></i>Forum Thread</a>
-                    </div>
-                    <div class="col">
+                        <a href="" target="_blank" style="margin-right:0.5rem"><i class="fa-solid fa-book fa-lg" style="color: #cad3f5;"></i>Forum Thread</a>
+                    
                         <a href="https://github.com/Helyphion/fr-search-by-rarity" target="_blank"><i class="fa-brands fa-github fa-lg" style="color: #cad3f5;"></i>Source Code</a>
                     </div>
 
