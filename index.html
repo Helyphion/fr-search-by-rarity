@@ -2,14 +2,15 @@
 
 <html data-bs-theme="dark">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>FR Search by Rarity</title>
-<!-- TODO: make a proper icon.. eventually -->
 <link rel="icon" href="favicon.ico">
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/7d09ac8b68.js" crossorigin="anonymous"></script>
 
 <style>
 body {
@@ -21,12 +22,17 @@ body {
     /*transform: skewX(-1deg);   sometimes I just feel evil..*/
 }
 
+a {
+    color: #f5a97f;
+}
+
 .box {
     border: 0.1rem solid #8087a2;
     background-color: #1e2030;
     padding: 0.5rem;
     margin: 0.5rem;
     height: 13rem;
+    position: relative;
 }
 
 .title {
@@ -46,8 +52,17 @@ body {
     line-height: 1.3rem;
 }
 
-.last-updated {
-    font-size: 0.8rem;
+.clear-all-button {
+    position: absolute;
+    right: 0.8rem;
+    top: 0.7rem;
+    height:1.5rem;
+    width:1.5em;
+    color: #8087a2;
+    background-color: #24273a;
+    border:1px solid #8087a2;
+    border-radius:0.2rem;
+    text-align:center;
 }
 
 .option {
@@ -72,9 +87,6 @@ body {
     color: #8087a2;
 }
 
-a {
-    color: #f5a97f;
-}
 </style>
 </head>
 
@@ -94,9 +106,9 @@ a {
             <div class="info-text">
                 If you've ever wanted to make a breeding pair with genes of equal rarities, but didn't feel like manually selecting them all from the dropdowns, this is for you!
                 
-                <div class="last-updated" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme="light"
+                <div class="last-updated" style="font-size: 0.8rem;" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme="light"
                 data-bs-title="launched site">
-                <span style="font-weight:bold; color:#f5a97f">Last updated:</span> 12-07-2026
+                <span style="font-weight:bold; color:#f5a97f">› Last updated:</span> 12-07-2026
                 </div>
 
                 <hr style="margin:0.5rem 0rem;">
@@ -149,9 +161,14 @@ a {
     <!-- breed rarity -->
     <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
+            <!-- "deselect all" button -->
+            <div class="clear-all-button" id="clear-breed">
+                <i class="fa-solid fa-trash-can fa-sm"></i>
+            </div>
 
             <div class="title">Breeds</div>
 
+            <!-- modern-ancient tab switcher -->
             <nav class="nav nav-pills nav-justified mx-1">
                   <a class="nav-link active" data-bs-toggle="pill" href="#modern">Modern</a>
                   <a class="nav-link" data-bs-toggle="pill" href="#ancient">Ancient</a>
@@ -240,6 +257,10 @@ a {
     <!-- primary gene rarity -->
     <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
+            <!-- "deselect all" button -->
+            <div class="clear-all-button" id="clear-prim">
+                <i class="fa-solid fa-trash-can fa-sm"></i>
+            </div>
 
             <div class="title">Primary Rarity</div>
             <form id="prim-rarity">
@@ -269,6 +290,10 @@ a {
     <!-- secondary gene rarity -->
     <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
+            <!-- "deselect all" button -->
+            <div class="clear-all-button" id="clear-sec">
+                <i class="fa-solid fa-trash-can fa-sm"></i>
+            </div>
 
             <div class="title">Secondary Rarity</div>
             <form id="sec-rarity">
@@ -298,6 +323,10 @@ a {
     <!-- tertiary gene rarity -->
     <div class="col-12 col-sm-6 col-md-4">
         <div class="box">
+            <!-- "deselect all" button -->
+            <div class="clear-all-button" id="clear-tert">
+                <i class="fa-solid fa-trash-can fa-sm"></i>
+            </div>
 
             <div class="title">Tertiary Rarity</div>
             <form id="tert-rarity">

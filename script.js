@@ -179,6 +179,17 @@ function assembleSearchLink() {
     }
 }
 
+function clearAllBoxes(givenId) {
+    const form = document.getElementById(givenId);
+    const allBoxes = form.querySelectorAll("input");
+
+    for (const box of allBoxes) {
+        box.checked = false;
+    }
+
+    refreshActiveBreed()
+}
+
 
 async function main() {
 
@@ -199,6 +210,18 @@ async function main() {
     const tabButtons = document.getElementsByClassName("nav-link");
     tabButtons[0].addEventListener("shown.bs.tab", () => refreshActiveBreed());
     tabButtons[1].addEventListener("shown.bs.tab", () => refreshActiveBreed());
+
+
+    const clearBreedButton = document.getElementById("clear-breed");
+    const clearPrimButton = document.getElementById("clear-prim");
+    const clearSecButton = document.getElementById("clear-sec");
+    const clearTertButton = document.getElementById("clear-tert");
+    // separate Event triggers for clearing modern & ancient breeds bc it's the simplest way rn
+    clearBreedButton.addEventListener("click", () => clearAllBoxes("breed-rarity"));
+    clearBreedButton.addEventListener("click", () => clearAllBoxes("ancient-breed"));
+    clearPrimButton.addEventListener("click", () => clearAllBoxes("prim-rarity"));
+    clearSecButton.addEventListener("click", () => clearAllBoxes("sec-rarity"));
+    clearTertButton.addEventListener("click", () => clearAllBoxes("tert-rarity"));
 
 
     // Bootstrap code for initialising tooltips
