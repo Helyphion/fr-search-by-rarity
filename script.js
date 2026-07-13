@@ -16,8 +16,7 @@ const utilFragmentStorage = {
 };
 
 let selectedBreed = "modern";
-const searchButton = document.getElementById("testing"); // wip
-
+const searchButton = document.getElementById("search-button");
 
 const primRarityForm = document.getElementById("prim-rarity");
 const secRarityForm = document.getElementById("sec-rarity");
@@ -172,10 +171,12 @@ function assembleSearchLink() {
                 searchString += key + "=" + value + "&"
             }
         }
-        searchButton.textContent = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
+        searchButton.classList.remove("disabled");
+        searchButton.href = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
 
     } else {
-        searchButton.textContent = ":(";
+        searchButton.href = "";
+        searchButton.classList.add("disabled");
     }
 }
 
