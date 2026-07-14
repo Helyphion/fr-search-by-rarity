@@ -222,11 +222,17 @@ a {
             <div class="tab-content mt-2">
                 <div class="tab-pane active" id="modern">
                     
-                    <form id="breed-rarity">
+                    <form id="breed-rarity" style="overflow:auto; height:7rem;">
 
                         <div class="option">
                             <input type="checkbox" name="rarity" value="plentiful"> <label for="plentiful">Plentiful</label>
+                            <a role="button" data-bs-toggle="collapse" href="#plentiful-collapse"><i class="fa-solid fa-caret-down"></i></a>
+                        
+                        <div class="collapse" id="plentiful-collapse" style="margin-left:2rem;">
+                            <input type="checkbox" name="breed" value="tundra"> <label for="tundra">Tundra</label>
                         </div>
+                        </div>
+
                         <div class="option">
                             <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
                         </div>
