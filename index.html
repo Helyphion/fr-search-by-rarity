@@ -40,7 +40,7 @@ a {
     background-color: #1e2030;
     padding: 0.5rem;
     margin: 0.5rem;
-    height: 13rem;
+    height: 15rem;
     position: relative;
 }
 
@@ -78,6 +78,10 @@ a {
     margin-left: 0.4rem;
 }
 
+.collapse, .collapsing {
+    margin-left: 1.3rem;
+}
+
 .nav-pills .nav-link {
     color: #8087a2;
     padding: 0.2rem;
@@ -91,7 +95,7 @@ a {
 
 .info-text {
     overflow: auto;
-    max-height: 9rem;
+    max-height: 11rem;
     line-height: 1.3rem;
 }
 
@@ -217,32 +221,45 @@ a {
                   <a class="nav-link" data-bs-toggle="pill" href="#ancient">Ancient</a>
             </nav>
             
-            <!-- modern breed selector -->
             <div class="tab-content mt-2">
+                <!-- modern breed selector -->
                 <div class="tab-pane active" id="modern">
                     
-                    <form id="breed-rarity" style="overflow:auto; height:7rem;">
+                    <form id="breed-rarity" style="overflow:auto; height:8.7rem;">
 
                         <div class="option">
                             <input type="checkbox" name="rarity" value="plentiful"> <label for="plentiful">Plentiful</label>
                             <a role="button" data-bs-toggle="collapse" href="#plentiful-collapse"><i class="fa-solid fa-caret-down"></i></a>
                         
-                        <div class="collapse" id="plentiful-collapse" style="margin-left:2rem;">
-                            <input type="checkbox" name="breed" value="tundra"> <label for="tundra">Tundra</label>
-                        </div>
+                            <div class="collapse" id="plentiful-collapse"></div>
                         </div>
 
                         <div class="option">
                             <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
+                            <a role="button" data-bs-toggle="collapse" href="#common-collapse"><i class="fa-solid fa-caret-down"></i></a>
+                        
+                            <div class="collapse" id="common-collapse"></div>
                         </div>
+
                         <div class="option">
                             <input type="checkbox" name="rarity" value="uncommon"> <label for="uncommon">Uncommon</label>
+                            <a role="button" data-bs-toggle="collapse" href="#uncommon-collapse"><i class="fa-solid fa-caret-down"></i></a>
+                        
+                            <div class="collapse" id="uncommon-collapse"></div>
                         </div>
+
                         <div class="option">
                             <input type="checkbox" name="rarity" value="limited"> <label for="limited">Limited</label>
+                            <a role="button" data-bs-toggle="collapse" href="#limited-collapse"><i class="fa-solid fa-caret-down"></i></a>
+                        
+                            <div class="collapse" id="limited-collapse"></div>
                         </div>
+
                         <div class="option">
                             <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
+                            <a role="button" data-bs-toggle="collapse" href="#rare-collapse"><i class="fa-solid fa-caret-down"></i></a>
+                        
+                            <div class="collapse" id="rare-collapse"></div>
                         </div>
                         
                     </form>
@@ -250,7 +267,7 @@ a {
                 </div>
 
                 <!-- ancient breed selector -->
-                <div class="tab-pane" id="ancient" style="max-height:7rem; overflow:auto">
+                <div class="tab-pane" id="ancient" style="max-height:8.7rem; overflow:auto">
                     
                     <form id="ancient-breed">
 
