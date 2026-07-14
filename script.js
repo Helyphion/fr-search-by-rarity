@@ -47,9 +47,9 @@ function refreshActiveBreed(givenForm) {
         const formContents = new FormData(breedRarityForm);
         const checkedBoxes = formContents.getAll("rarity");
 
-        for (let i = 0; i < checkedBoxes.length; i++) {
+        for (const rarity of checkedBoxes) {
 
-            let currentRarity = breedDatabase["modern"][checkedBoxes[i]]
+            let currentRarity = breedDatabase["modern"][rarity]
 
             for (const breed of Object.keys(currentRarity)) {
                 searchFragment += currentRarity[breed] + "%2C";
