@@ -35,6 +35,67 @@ async function fetchJsonData(file) {
 }
 
 
+function populateModernCollapsibles() {
+
+    const modernBreeds = breedDatabase["modern"];
+    for (const rarity of Object.keys(modernBreeds)) {
+
+        for (const breed of Object.keys(modernBreeds[rarity])) {
+
+            const parentDiv = document.getElementById(rarity + "-collapse");
+
+            const optionDiv = document.createElement("div");
+            optionDiv.className = "option";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.name = "breed";
+            checkbox.value = breed;
+
+            const label = document.createElement("label");
+            label.htmlFor = breed;
+            label.textContent = breed.charAt(0).toUpperCase() + breed.slice(1);
+            // I hate javascript >:[
+
+            optionDiv.appendChild(checkbox);
+            optionDiv.append(" ");
+            optionDiv.appendChild(label);
+
+            parentDiv.appendChild(optionDiv);
+        }
+
+    }
+
+}
+
+
+function updateCollapsedBreeds() {
+    const formContents = new FormData(breedRarityForm);
+    const checkedBoxes = formContents.getAll("rarity");
+
+    for (const rarity of checkedBoxes) {
+
+        const currentCollapsible = document.getElementById(rarity + "-collapse");
+        const childBoxes = currentCollapsible.querySelectorAll("input");
+
+        for (const box of childBoxes) {
+            console.log(box)
+            box.checked = true;
+        }
+
+    }
+
+    const parentBox = document.querySelector("#breed-rarity").querySelectorAll('input[name="rarity"]');
+    console.log(parentBox)
+
+    for (const box of parentBox) {
+        console.log(box)
+        if (box.checked === true) {
+            
+        }
+    }
+}
+
 function refreshActiveBreed(givenForm) {
     let searchFragment = "";
 
@@ -192,41 +253,6 @@ function clearAllBoxes(givenId) {
 }
 
 
-function populateModernCollapsibles() {
-
-    const modernBreeds = breedDatabase["modern"];
-    for (const rarity of Object.keys(modernBreeds)) {
-        console.log(modernBreeds[rarity])
-
-        for (const breed of Object.keys(modernBreeds[rarity])) {
-
-            const parentDiv = document.getElementById(rarity + "-collapse");
-
-            const optionDiv = document.createElement("div");
-            optionDiv.className = "option";
-
-            const checkbox = document.createElement("input");
-            checkbox.type = "checkbox";
-            checkbox.name = "breed";
-            checkbox.value = breed;
-
-            const label = document.createElement("label");
-            label.htmlFor = breed;
-            label.textContent = breed.charAt(0).toUpperCase() + breed.slice(1);
-            // I hate javascript >:[
-
-            console.log(label);
-            // <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
-
-            optionDiv.appendChild(checkbox);
-            optionDiv.append(" ");
-            optionDiv.appendChild(label);
-
-            parentDiv.appendChild(optionDiv);
-        }
-    }
-}
-
 
 async function main() {
 
@@ -240,7 +266,7 @@ async function main() {
     tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm));
     // arrow functions are necessary for parameters to work
 
-    breedRarityForm.addEventListener("change", () => refreshActiveBreed());
+    breedRarityForm.addEventListener("change", () => updateCollapsedBreeds());
     ancientBreedForm.addEventListener("change", () => refreshActiveBreed());
 
     utilityForm.addEventListener("change", () => refreshUtilities());
