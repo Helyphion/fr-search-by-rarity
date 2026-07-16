@@ -69,22 +69,27 @@ function populateModernCollapsibles() {
 }
 
 
-function updateCollapsedBreeds() {
+function updateCollapsedBreeds(box) {
 
-    const parentBoxes = document.querySelector("#breed-rarity").querySelectorAll('input[name="rarity"]');
+    const childBoxes = document.getElementById(box.value + "-collapse").querySelectorAll("input");
 
-    for (const box of parentBoxes) {
-
-        const childBoxes = document.getElementById(box.value + "-collapse").querySelectorAll("input");
-
-        for (const child of childBoxes) {
-            box.checked ? child.checked = true : child.checked = false;
-        }
-
+    for (const child of childBoxes) {
+        box.checked ? child.checked = true : child.checked = false;
     }
 
     refreshActiveBreed();
+
 }
+
+
+function updateParentBoxes(box, childBoxes) {
+    if ([...childBoxes].every(x => x.checked)) {
+        box.checked = true;
+    } else if ([...childBoxes].every(x => !x.checked)) {
+        box.checked = false;
+    }
+}
+
 
 function refreshActiveBreed(givenForm) {
     let searchFragment = "";
@@ -96,7 +101,7 @@ function refreshActiveBreed(givenForm) {
         selectedBreed = "modern";
 
         const formContents = new FormData(breedRarityForm);
-        const checkedBoxes = formContents.getAll("rarity");
+        const checkedBoxes = formContents.getAll("breed");
 
         for (const rarity of checkedBoxes) {
 
@@ -256,9 +261,27 @@ async function main() {
     tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm));
     // arrow functions are necessary for parameters to work
 
-    breedRarityForm.addEventListener("change", () => updateCollapsedBreeds());
-    ancientBreedForm.addEventListener("change", () => refreshActiveBreed());
+    const breedRarityBoxes = document.querySelector("#breed-rarity").querySelectorAll('input[name="rarity"]');
+    // add separate eventListener for each collapsible
+    for (const box of breedRarityBoxes) {
+        box.addEventListener("change", () => updateCollapsedBreeds(box));
 
+        const childBoxes = box.parentElement.querySelector(".collapse").querySelectorAll("input");
+        console.log(childBoxes);
+        for (const child of childBoxes) {
+            child.addEventListener("change", () => updateParentBoxes(box, childBoxes));
+        }
+        // brain too empty.. TODO: fix this
+    }
+
+    /*
+    const collapsibleBoxes = document.querySelector("#breed-rarity").querySelectorAll('input[name="breed"]');
+    for (const box of collapsibleBoxes) {
+        box.addEventListener("change", () => updateParentBoxes(box));
+    }
+    */
+
+    ancientBreedForm.addEventListener("change", () => refreshActiveBreed());
     utilityForm.addEventListener("change", () => refreshUtilities());
 
 
