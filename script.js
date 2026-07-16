@@ -88,6 +88,8 @@ function updateParentBoxes(box, childBoxes) {
     } else if ([...childBoxes].every(x => !x.checked)) {
         box.checked = false;
     }
+
+    refreshActiveBreed();
 }
 
 
@@ -103,25 +105,27 @@ function refreshActiveBreed(givenForm) {
         const formContents = new FormData(breedRarityForm);
         const checkedBoxes = formContents.getAll("breed");
 
-        for (const rarity of checkedBoxes) {
-
-            let currentRarity = breedDatabase["modern"][rarity]
-
-            for (const breed of Object.keys(currentRarity)) {
-                searchFragment += currentRarity[breed] + "%2C";
+        // that's a lotta nesting.
+        for (const rarity of Object.values(breedDatabase["modern"])) {
+            for (const breed of Object.keys(rarity)) {
+                for (const chosenBreed of checkedBoxes) {
+                    if (chosenBreed === breed) {
+                        searchFragment += rarity[breed] + "%2C";
+                    }
+                }
             }
-
         }
 
+        
         searchFragment = searchFragment.slice(0, -3);
         fragmentStorage.d_breed = searchFragment;
+        console.log(searchFragment);
 
 
     } else if (activeTabName === "ancient") {
 
         const formContents = new FormData(ancientBreedForm);
         selectedBreed = formContents.get("breed");
-        console.log(selectedBreed)
 
         fragmentStorage.d_breed = "";
     }
@@ -142,7 +146,7 @@ function refreshActiveGenes(geneSlot, givenForm) {
     for (let i = 0; i < checkedBoxes.length; i++) {
 
         if (checkedBoxes[i] == "basic") {
-            searchFragment += "0%2C"
+            searchFragment += "0%2C";
         }
         else {
             let currentRarity = geneDatabase[geneSlot][checkedBoxes[i]];
@@ -164,7 +168,6 @@ function refreshActiveGenes(geneSlot, givenForm) {
     }
 
     searchFragment = searchFragment.slice(0, -3);
-    console.log(searchFragment);
 
     // write assembled searchFragment to global variables
     switch (geneSlot) {
@@ -198,14 +201,13 @@ function refreshUtilities() {
         utilFragmentStorage.d_gender = "";
     }
 
-    // sets to g2+ only if exclude g1s requested, clears if not
+    // sets to g2+ only (0) if exclude g1s requested, clears if not
     gen1Choice === "exclude" ? utilFragmentStorage.d_gen1 = "0" : utilFragmentStorage.d_gen1 = "";
-    console.log(utilFragmentStorage.d_gen1)
 
     // sets 1 if rtb requested, clears if not
     rtbChoice === "rtb" ? utilFragmentStorage.d_rtb = "1" : utilFragmentStorage.d_rtb = "";
 
-    assembleSearchLink()
+    assembleSearchLink();
 }
 
 
@@ -214,8 +216,7 @@ function assembleSearchLink() {
 
     for (const [key, value] of Object.entries(fragmentStorage)) {
         if (value !== "") {
-            console.log(key)
-            searchString += key + "=" + value + "&"
+            searchString += key + "=" + value + "&";
         }
     }
     // set link if any parameters are given; clear it if not
@@ -223,8 +224,7 @@ function assembleSearchLink() {
 
         for (const [key, value] of Object.entries(utilFragmentStorage)) {
             if (value !== "") {
-                console.log(key)
-                searchString += key + "=" + value + "&"
+                searchString += key + "=" + value + "&";
             }
         }
         searchButton.classList.remove("disabled");
@@ -244,7 +244,7 @@ function clearAllBoxes(givenId) {
         box.checked = false;
     }
 
-    refreshActiveBreed()
+    refreshActiveBreed();
 }
 
 
@@ -265,21 +265,12 @@ async function main() {
     // add separate eventListener for each collapsible
     for (const box of breedRarityBoxes) {
         box.addEventListener("change", () => updateCollapsedBreeds(box));
-
+        // add eventListeners for child boxes to sync parent boxes if all are selected/unselected
         const childBoxes = box.parentElement.querySelector(".collapse").querySelectorAll("input");
-        console.log(childBoxes);
         for (const child of childBoxes) {
             child.addEventListener("change", () => updateParentBoxes(box, childBoxes));
         }
-        // brain too empty.. TODO: fix this
     }
-
-    /*
-    const collapsibleBoxes = document.querySelector("#breed-rarity").querySelectorAll('input[name="breed"]');
-    for (const box of collapsibleBoxes) {
-        box.addEventListener("change", () => updateParentBoxes(box));
-    }
-    */
 
     ancientBreedForm.addEventListener("change", () => refreshActiveBreed());
     utilityForm.addEventListener("change", () => refreshUtilities());
@@ -303,8 +294,8 @@ async function main() {
 
 
     // Bootstrap code for initialising tooltips
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 }
 
