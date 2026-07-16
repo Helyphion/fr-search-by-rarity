@@ -70,30 +70,20 @@ function populateModernCollapsibles() {
 
 
 function updateCollapsedBreeds() {
-    const formContents = new FormData(breedRarityForm);
-    const checkedBoxes = formContents.getAll("rarity");
 
-    for (const rarity of checkedBoxes) {
+    const parentBoxes = document.querySelector("#breed-rarity").querySelectorAll('input[name="rarity"]');
 
-        const currentCollapsible = document.getElementById(rarity + "-collapse");
-        const childBoxes = currentCollapsible.querySelectorAll("input");
+    for (const box of parentBoxes) {
 
-        for (const box of childBoxes) {
-            console.log(box)
-            box.checked = true;
+        const childBoxes = document.getElementById(box.value + "-collapse").querySelectorAll("input");
+
+        for (const child of childBoxes) {
+            box.checked ? child.checked = true : child.checked = false;
         }
 
     }
 
-    const parentBox = document.querySelector("#breed-rarity").querySelectorAll('input[name="rarity"]');
-    console.log(parentBox)
-
-    for (const box of parentBox) {
-        console.log(box)
-        if (box.checked === true) {
-            
-        }
-    }
+    refreshActiveBreed();
 }
 
 function refreshActiveBreed(givenForm) {
