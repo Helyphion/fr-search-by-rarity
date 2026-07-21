@@ -13,4 +13,4 @@ If you've ever wanted to make a breeding pair with genes of equal rarities, but 
 - **14-07-2026** // launched site with currently available genes & breeds
 
 
-### Links: **[Tool Website](https://helyphion.github.io/fr-search-by-rarity/)** // **[Forum Thread]()**
+### Links: **[Tool Website](https://helyphion.github.io/fr-search-by-rarity/)** // **[Forum Thread](https://www1.flightrising.com/forums/gde/3485467)**
