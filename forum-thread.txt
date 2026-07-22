@@ -7,9 +7,21 @@ I like when my fodder pairs have a 50/50 probability for each gene because it's 
 
 This site [b]does not[/b] scrape anything from Flight Rising itself; the search links are provided based on a really long JSON file I made using data from [url=https://www1.flightrising.com/forums/gde/3109561]this thread[/url] by DarkPuffin and a whole lot of copy-pasted HTML from the Scrying Workshop page. This also means it needs to be manually updated every time a new gene is released - if you notice a gene is missing or working incorrectly, please ping me in this thread (or send me a PM) so I can fix it! [emoji=new friend size=1]
 
-If you're curious about the source code of the site, you can find it [url=https://github.com/Helyphion/fr-search-by-rarity]here[/url].
+[columns]
+[size=4]If you're curious about the source code of the site, you can find it [url=https://github.com/Helyphion/fr-search-by-rarity]here[/url].[/size]
 
+[color=transparent]____[/color]
+[nextcol]
+[color=transparent]____[/color]
+[nextcol]
 [center][pinglist=69246][/center]
+[nextcol]
+[color=transparent]_____[/color]
+[/columns]
+
+[color=transparent]_[/color] [size=5][b]CHANGELOG[/b][/size]
+[color=transparent]__[/color] [b]22/07/2026[/b] thread opened, pinglist created
+[color=transparent]__[/color] [size=2][b]14/07/2026[/b] website launched[/size]
 
 
 [rule]
