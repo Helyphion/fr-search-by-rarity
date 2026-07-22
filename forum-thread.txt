@@ -1,0 +1,28 @@
+[center]
+[img]https://i.imgur.com/daaExNZ.png[/img]
+
+[size=6][b]SEARCH BY RARITY[/b][/size][/center]
+
+I like when my fodder pairs have a 50/50 probability for each gene because it's fun to see how distinct the hatchlings can end up being, but searching for new pairs on the AH has always been really tedious since there is no way to filter by gene rarity. So I made a website that does exactly that!
+
+This site [b]does not[/b] scrape anything from Flight Rising itself; the search links are provided based on a really long JSON file I made using data from [url=https://www1.flightrising.com/forums/gde/3109561]this thread[/url] by DarkPuffin and a whole lot of copy-pasted HTML from the Scrying Workshop page. This also means it needs to be manually updated every time a new gene is released - if you notice a gene is missing or working incorrectly, please ping me in this thread (or send me a PM) so I can fix it! [emoji=new friend size=1]
+
+If you're curious about the source code of the site, you can find it [url=https://github.com/Helyphion/fr-search-by-rarity]here[/url].
+
+[center][pinglist=69246][/center]
+
+
+[rule]
+
+
+
+[center][size=6][b][url=https://helyphion.github.io/fr-search-by-rarity/]» WEBSITE LINK[/url][/b][/size][/center]
+
+
+
+[img]https://i.ibb.co/1fTccyrT/search-by-rarity-example.png[/img]
+
+
+[center][img]https://i.imgur.com/2uq3ZkE.png[/img]
+[url=https://www1.flightrising.com/forums/gde/2669851]header/footer[/url] by [url=https://www1.flightrising.com/clan-profile/434695]Vertigris[/url]
+[/center]
