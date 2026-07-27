@@ -83,10 +83,10 @@ function updateCollapsedBreeds(box) {
 
 
 function updateParentBoxes(box, childBoxes) {
-    if ([...childBoxes].every(x => x.checked)) {
-        box.checked = true;
-    } else if ([...childBoxes].every(x => !x.checked)) {
+    if ([...childBoxes].every(x => !x.checked)) {
         box.checked = false;
+    } else {
+        box.checked = true;
     }
 
     refreshActiveBreed();
