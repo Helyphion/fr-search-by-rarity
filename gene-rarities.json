@@ -3,6 +3,7 @@
     "common": {
         "arapaima": {
             "sandsurge": 194,
+            "dusthide": 545,
             "everlux": 345,
             "vigil": 511,
             "thorntail": 458
@@ -92,6 +93,7 @@
         },
         "marble": {
             "banescale": 47,
+            "dusthide": 552,
             "everlux": 358,
             "cirrus": 424,
             "vigil": 532,
@@ -148,6 +150,7 @@
             "aberration": 104,
             "undertide": 134,
             "sandsurge": 209,
+            "dusthide": 559,
             "vigil": 540
         },
         "tapir": {
@@ -160,6 +163,7 @@
             "aether": 330,
             "sandsurge": 210,
             "auraboa": 258,
+            "dusthide": 560,
             "vigil": 541,
             "thorntail": 485
         },
@@ -253,6 +257,7 @@
         "chorus": {
             "modern": 337,
             "veilspun": 338,
+            "dusthide": 549,
             "everlux": 349,
             "cirrus": 420,
             "thorntail": 466
@@ -272,6 +277,7 @@
             "thorntail": 467
         },
         "criculaworm": {
+            "dusthide": 551,
             "everlux": 351,
             "cirrus": 414,
             "vigil": 526,
@@ -316,16 +322,21 @@
             "aether": 152,
             "sandsurge": 198,
             "auraboa": 248,
+            "dusthide": 550,
             "everlux": 510,
             "vigil": 530,
             "thorntail": 472
         },
         "jupiter": {
             "modern": 14,
+            "gaoler": 564,
+            "banescale": 563,
             "veilspun": 64,
+            "aberration": 566,
             "undertide": 270,
             "aether": 153,
             "sandsurge": 197,
+            "auraboa": 565,
             "dusthide": 300,
             "everlux": 355
         },
@@ -369,6 +380,7 @@
         "rattlesnake": {
             "sandsurge": 206,
             "auraboa": 256,
+            "dusthide": 557,
             "thorntail": 480
         },
         "ribbon": {
@@ -430,6 +442,7 @@
             "aether": 333,
             "sandsurge": 397,
             "auraboa": 260,
+            "dusthide": 562,
             "cirrus": 434,
             "vigil": 542,
             "thorntail": 488
@@ -468,6 +481,7 @@
             "undertide": 264,
             "aether": 320,
             "sandsurge": 195,
+            "dusthide": 546,
             "everlux": 350
         },
         "crosshatch": {
@@ -488,6 +502,7 @@
             "aether": 323,
             "sandsurge": 394,
             "auraboa": 244,
+            "dusthide": 548,
             "thorntail": 470
         },
         "ground": {
@@ -543,6 +558,7 @@
             "veilspun": 140,
             "aberration": 227,
             "undertide": 131,
+            "dusthide": 555,
             "everlux": 370
         },
         "python": {
@@ -550,6 +566,7 @@
             "aether": 160,
             "sandsurge": 203,
             "auraboa": 255,
+            "dusthide": 556,
             "everlux": 364,
             "cirrus": 430,
             "thorntail": 478
@@ -591,6 +608,7 @@
             "aether": 336,
             "sandsurge": 208,
             "auraboa": 503,
+            "dusthide": 558,
             "everlux": 368
         },
         "soil": {
@@ -623,6 +641,7 @@
             "aberration": 231,
             "undertide": 113,
             "aether": 164,
+            "dusthide": 561,
             "everlux": 373,
             "thorntail": 486
         }
@@ -637,6 +656,7 @@
             "undertide": 118,
             "aether": 321,
             "sandsurge": 399,
+            "dusthide": 547,
             "everlux": 352
         },
         "dimension": {
@@ -669,6 +689,7 @@
             "undertide": 278,
             "aether": 157,
             "auraboa": 250,
+            "dusthide": 553,
             "cirrus": 429,
             "vigil": 533
         },
@@ -696,6 +717,7 @@
             "veilspun": 383,
             "aberration": 101,
             "undertide": 120,
+            "dusthide": 554,
             "everlux": 362,
             "thorntail": 476
         },
@@ -734,6 +756,7 @@
     "common": {
         "arowana": {
             "sandsurge": 194,
+            "dusthide": 545,
             "everlux": 345,
             "vigil": 511,
             "thorntail": 458
@@ -831,10 +854,12 @@
             "aberration": 103,
             "undertide": 134,
             "sandsurge": 209,
+            "dusthide": 559,
             "vigil": 539
         },
         "mottle": {
             "banescale": 47,
+            "dusthide": 552,
             "everlux": 356,
             "cirrus": 424,
             "vigil": 532,
@@ -903,6 +928,7 @@
             "aether": 333,
             "sandsurge": 210,
             "auraboa": 258,
+            "dusthide": 560,
             "vigil": 541,
             "thorntail": 485
         },
@@ -957,6 +983,7 @@
         "choir": {
             "modern": 337,
             "veilspun": 338,
+            "dusthide": 549,
             "everlux": 346,
             "cirrus": 420,
             "thorntail": 466
@@ -1002,6 +1029,7 @@
         "diamondback": {
             "sandsurge": 206,
             "auraboa": 256,
+            "dusthide": 557,
             "thorntail": 480
         },
         "drip": {
@@ -1067,6 +1095,7 @@
             "aether": 326,
             "sandsurge": 397,
             "auraboa": 260,
+            "dusthide": 562,
             "cirrus": 434,
             "vigil": 542,
             "thorntail": 488
@@ -1099,6 +1128,7 @@
             "aether": 152,
             "sandsurge": 198,
             "auraboa": 248,
+            "dusthide": 550,
             "everlux": 510,
             "vigil": 530,
             "thorntail": 472
@@ -1117,10 +1147,14 @@
         },
         "saturn": {
             "modern": 15,
+            "gaoler": 564,
+            "banescale": 563,
             "veilspun": 65,
+            "aberration": 565,
             "undertide": 270,
             "aether": 153,
             "sandsurge": 197,
+            "auraboa": 566,
             "dusthide": 300,
             "everlux": 358
         },
@@ -1138,6 +1172,7 @@
             "thorntail": 465
         },
         "silkspot": {
+            "dusthide": 551,
             "everlux": 354,
             "cirrus": 414,
             "vigil": 526,
@@ -1182,6 +1217,7 @@
             "aberration": 224,
             "undertide": 114,
             "aether": 164,
+            "dusthide": 561,
             "everlux": 373,
             "thorntail": 486
         },
@@ -1217,6 +1253,7 @@
             "undertide": 264,
             "aether": 329,
             "sandsurge": 195,
+            "dusthide": 546,
             "everlux": 352
         },
         "marlin": {
@@ -1239,6 +1276,7 @@
             "aether": 160,
             "sandsurge": 203,
             "auraboa": 255,
+            "dusthide": 556,
             "everlux": 362,
             "cirrus": 430,
             "thorntail": 478
@@ -1263,6 +1301,7 @@
             "aether": 330,
             "sandsurge": 394,
             "auraboa": 244,
+            "dusthide": 548,
             "thorntail": 470
         },
         "parade": {
@@ -1287,6 +1326,7 @@
             "aether": 336,
             "sandsurge": 208,
             "auraboa": 503,
+            "dusthide": 558,
             "everlux": 370
         },
         "spade": {
@@ -1323,6 +1363,7 @@
             "veilspun": 140,
             "aberration": 230,
             "undertide": 131,
+            "dusthide": 555,
             "everlux": 375
         },
         "trail": {
@@ -1357,6 +1398,7 @@
             "undertide": 278,
             "aether": 157,
             "auraboa": 250,
+            "dusthide": 553,
             "cirrus": 429,
             "vigil": 533
         },
@@ -1406,6 +1448,7 @@
             "undertide": 118,
             "aether": 323,
             "sandsurge": 399,
+            "dusthide": 547,
             "everlux": 349
         },
         "flicker": {
@@ -1438,6 +1481,7 @@
             "veilspun": 365,
             "aberration": 101,
             "undertide": 120,
+            "dusthide": 554,
             "everlux": 363,
             "thorntail": 476
         },
@@ -1461,6 +1505,7 @@
         "chitin": {
             "sandsurge": 183,
             "auraboa": 402,
+            "dusthide": 601,
             "everlux": 352
         },
         "contour": {
@@ -1516,7 +1561,8 @@
             "gaoler": 29,
             "aberration": 93,
             "aether": 334,
-            "sandsurge": 179
+            "sandsurge": 179,
+            "dusthide": 609
         },
         "topcoat": {
             "undertide": 264,
@@ -1543,6 +1589,7 @@
             "thorntail": 529
         },
         "wool": {
+            "dusthide": 618,
             "everlux": 384,
             "cirrus": 458,
             "thorntail": 531
@@ -1550,6 +1597,7 @@
     },
     "uncommon": {
         "agate": {
+            "dusthide": 615,
             "vigil": 547
         },
         "antlers": {
@@ -1639,7 +1687,8 @@
             "modern": 16,
             "banescale": 44,
             "aether": 142,
-            "sandsurge": 187
+            "sandsurge": 187,
+            "dusthide": 605
         },
         "okapi": {
             "modern": 9,
@@ -1651,6 +1700,7 @@
         },
         "paradise": {
             "auraboa": 219,
+            "dusthide": 614,
             "everlux": 367,
             "cirrus": 449,
             "thorntail": 517
@@ -1778,6 +1828,7 @@
         },
         "beetle": {
             "veilspun": 65,
+            "dusthide": 599,
             "thorntail": 499
         },
         "blossom": {
@@ -1805,10 +1856,12 @@
         "brightshine": {
             "banescale": 310,
             "veilspun": 169,
+            "aberration": 612,
             "undertide": 170,
             "dusthide": 309,
             "everlux": 465,
-            "cirrus": 466
+            "cirrus": 466,
+            "vigil": 613
         },
         "capsule": {
             "modern": 18,
@@ -1820,6 +1873,7 @@
             "aether": 319,
             "sandsurge": 410,
             "auraboa": 229,
+            "dusthide": 600,
             "vigil": 545
         },
         "carnivore": {
@@ -1834,6 +1888,7 @@
             "vigil": 549
         },
         "coral": {
+            "dusthide": 602,
             "cirrus": 437,
             "vigil": 552,
             "thorntail": 501
@@ -1897,6 +1952,7 @@
         },
         "flutter": {
             "aether": 141,
+            "dusthide": 616,
             "everlux": 355,
             "thorntail": 507
         },
@@ -2029,6 +2085,7 @@
         },
         "skuttle": {
             "auraboa": 223,
+            "dusthide": 606,
             "everlux": 374
         },
         "smirch": {
@@ -2057,7 +2114,9 @@
             "veilspun": 312,
             "aberration": 311,
             "sandsurge": 194,
-            "cirrus": 477
+            "auraboa": 623,
+            "cirrus": 477,
+            "vigil": 624
         },
         "topscale": {
             "cirrus": 456
@@ -2099,7 +2158,8 @@
             "vigil": 582
         },
         "weathered": {
-            "gaoler": 35
+            "gaoler": 35,
+            "dusthide": 617
         },
         "webmane": {
             "vigil": 577
@@ -2138,10 +2198,15 @@
         },
         "eclipse": {
             "modern": 421,
+            "gaoler": 622,
+            "banescale": 619,
             "veilspun": 423,
+            "aberration": 621,
             "undertide": 422,
+            "aether": 620,
             "sandsurge": 472,
             "auraboa": 536,
+            "dusthide": 603,
             "everlux": 353,
             "cirrus": 439,
             "vigil": 557
@@ -2202,7 +2267,8 @@
             "aberration": 203,
             "undertide": 254,
             "aether": 325,
-            "auraboa": 235
+            "auraboa": 235,
+            "dusthide": 604
         },
         "medusa": {
             "veilspun": 393,
@@ -2282,6 +2348,7 @@
         },
         "spectre": {
             "sandsurge": 188,
+            "dusthide": 607,
             "cirrus": 454,
             "thorntail": 524
         },
@@ -2315,6 +2382,7 @@
         "tentacles": {
             "undertide": 125,
             "aether": 339,
+            "dusthide": 608,
             "vigil": 575,
             "thorntail": 527
         },
