@@ -86,6 +86,20 @@ a {
     font-size: 0.9rem;
 }
 
+.breeding-cooldown {
+    color: #8087a2;
+    font-size: 0.8rem;
+            /*top right bottom left*/
+    margin: -0.5rem 0rem 0.1rem 1.2rem;
+}
+
+.ancient-breeding-cooldown {
+    color:#8087a2;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: -0.2rem 0rem;
+}
+
 .nav-pills .nav-link {
     color: #8087a2;
     padding: 0.2rem;
@@ -234,6 +248,7 @@ a {
                         <div class="option">
                             <input type="checkbox" name="rarity" value="plentiful"> <label for="plentiful">Plentiful</label>
                             <a role="button" data-bs-toggle="collapse" href="#plentiful-collapse"><i class="fa-solid fa-caret-down"></i></a>
+                            <div class="breeding-cooldown">15 days</div>
                         
                             <div class="collapse" id="plentiful-collapse"></div>
                         </div>
@@ -241,28 +256,32 @@ a {
                         <div class="option">
                             <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
                             <a role="button" data-bs-toggle="collapse" href="#common-collapse"><i class="fa-solid fa-caret-down"></i></a>
-                        
+                            <div class="breeding-cooldown">20 days</div>
+
                             <div class="collapse" id="common-collapse"></div>
                         </div>
 
                         <div class="option">
                             <input type="checkbox" name="rarity" value="uncommon"> <label for="uncommon">Uncommon</label>
                             <a role="button" data-bs-toggle="collapse" href="#uncommon-collapse"><i class="fa-solid fa-caret-down"></i></a>
-                        
+                            <div class="breeding-cooldown">25 days</div>
+
                             <div class="collapse" id="uncommon-collapse"></div>
                         </div>
 
                         <div class="option">
                             <input type="checkbox" name="rarity" value="limited"> <label for="limited">Limited</label>
                             <a role="button" data-bs-toggle="collapse" href="#limited-collapse"><i class="fa-solid fa-caret-down"></i></a>
-                        
+                            <div class="breeding-cooldown">30 days</div>
+
                             <div class="collapse" id="limited-collapse"></div>
                         </div>
 
                         <div class="option">
                             <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
                             <a role="button" data-bs-toggle="collapse" href="#rare-collapse"><i class="fa-solid fa-caret-down"></i></a>
-                        
+                            <div class="breeding-cooldown">35 days</div>
+
                             <div class="collapse" id="rare-collapse"></div>
                         </div>
                         
@@ -271,51 +290,56 @@ a {
                 </div>
 
                 <!-- ancient breed selector -->
-                <div class="tab-pane" id="ancient" style="max-height:8.7rem; overflow:auto">
-                    
-                    <form id="ancient-breed">
+                <div class="tab-pane" id="ancient" >
+                    <div style="max-height:8rem; overflow:auto">
+                        
+                        <form id="ancient-breed">
 
-                        <div class="option">
-                            <input type="radio" name="breed" value="aberration"> <label for="aberration">Aberration</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="aether"> <label for="aether">Aether</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="auraboa"> <label for="auraboa">Auraboa</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="banescale"> <label for="banescale">Banescale</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="cirrus"> <label for="cirrus">Cirrus</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="dusthide"> <label for="dusthide">Dusthide</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="everlux"> <label for="everlux">Everlux</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="gaoler"> <label for="gaoler">Gaoler</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="sandsurge"> <label for="sandsurge">Sandsurge</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="thorntail"> <label for="thorntail">Thorntail</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="undertide"> <label for="undertide">Undertide</label>
-                        </div> 
-                        <div class="option">
-                            <input type="radio" name="breed" value="veilspun"> <label for="veilspun">Veilspun</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="breed" value="vigil"> <label for="vigil">Vigil</label>
-                        </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="aberration"> <label for="aberration">Aberration</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="aether"> <label for="aether">Aether</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="auraboa"> <label for="auraboa">Auraboa</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="banescale"> <label for="banescale">Banescale</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="cirrus"> <label for="cirrus">Cirrus</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="dusthide"> <label for="dusthide">Dusthide</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="everlux"> <label for="everlux">Everlux</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="gaoler"> <label for="gaoler">Gaoler</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="sandsurge"> <label for="sandsurge">Sandsurge</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="thorntail"> <label for="thorntail">Thorntail</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="undertide"> <label for="undertide">Undertide</label>
+                            </div> 
+                            <div class="option">
+                                <input type="radio" name="breed" value="veilspun"> <label for="veilspun">Veilspun</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="breed" value="vigil"> <label for="vigil">Vigil</label>
+                            </div>
 
-                    </form>
+                        </form>
+
+                    </div>
+
+                    <div class="ancient-breeding-cooldown">20 days on all</div>
                     
                 </div>
             </div>
