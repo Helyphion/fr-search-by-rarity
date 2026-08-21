@@ -2,13 +2,13 @@ PRIMARY / COMMON:
 Arapaima, Caterpillar, Checkers, Clown, Fade, Falcon, Laced, Leopard, Marble, Piebald, Rabicano, Radio, Savanna, Shaggy, Speckle, Spool, Swirl, Tapir, Tiger, Varnish, Wrought
 
 PRIMARY / UNCOMMON:
-Bar, Boa, Bright, Caiman, Cherub, Chevron, Chorus, Cinder, Criculaworm, Faire, Flaunt, Giraffe, Ink, Jaguar, Jupiter, Lionfish, Mochlus, Mosaic, Patina, Ragged, Rattlesnake, Ribbon, Ripple, Shell, Sphinxmoth, Splatter, Strike, Vipera, Wolf
+Bar, Begonia, Boa, Bright, Caiman, Cherub, Chevron, Chord, Cinder, Criculaworm, Confetti, Faire, Flaunt, Giraffe, Ink, Jaguar, Jupiter, Lionfish, Mochlus, Mosaic, Patina, Ragged, Rattlesnake, Ribbon, Ripple, Shell, Sphinxmoth, Splatter, Strike, Vipera, Wolf
 
 PRIMARY / LIMITED:
-Arc, Boulder, Candy, Candycane, Chrysocolla, Crosshatch, Diamond, Display, Fern, Ground, Love, Octopus, Orb, Papillon, Phantom, Pinstripe, Poison, Python, Sailfish, Skink, Slime, Soil, Stitched, Tide
+Arc, Boulder, Candy, Candycane, Chrysocolla, Crosshatch, Diamond, Display, Fern, Flourish, Ground, Love, Octopus, Orb, Papillon, Phantom, Pinstripe, Poison, Python, Sailfish, Skink, Slime, Soil, Stitched, Tide
 
 PRIMARY / RARE:
-Crystal, Dimension, Glass, Glow, Harlequin, Iridescent, Metallic, Petals, Petrified, Pharaoh, Starmap, Throne, Twinkle, Wasp, Wicker
+Crystal, Dimension, Glass, Glow, Harlequin, Iridescent, Kyathos, Metallic, Petals, Petrified, Pharaoh, Starmap, Throne, Twinkle, Wasp, Wicker
 
 
 
@@ -16,13 +16,13 @@ SECONDARY / COMMON:
 Arowana, Blend, Chess, Clouded, Edged, Eye Spots, Freckle, Lacquer, Larvae, Marbled, Mottle, Paint, Peregrine, Roan, Safari, Signal, Spire, Streak, Striation, Stripes, Thread
 
 SECONDARY / UNCOMMON:
-Arrow, Blaze, Breakup, Carousel, Choir, Coil, Croc, Current, Daub, Diamondback, Drip, Dye, Eel, Flair, Hawkmoth, Hex, Hypnotic, Noxtide, Oxidize, Pack, Riopa, Rosette, Saddle, Saturn, Seraph, Silkspot, Tear, Vivid, Web
+Arrow, Blaze, Breakup, Carousel, Celebration, Choir, Coil, Croc, Current, Daub, Diamondback, Drip, Dye, Eel, Flair, Hawkmoth, Hex, Hypnotic, Noxtide, Oxidize, Pack, Rex, Riopa, Rosette, Saddle, Saturn, Seraph, Silkspot, Tear, Vivid, Web
 
 SECONDARY / LIMITED:
-Affection, Fissure, Foam, Hatch, Icing, Loam, Loop, Malachite, Marlin, Morph, Myrid, Paisley, Parade, Patchwork, Rings, Sludge, Spade, Spinner, Spirit, Sugarplum, Swallowtail, Toxin, Trail, Weaver
+Affection, Fissure, Flick, Foam, Hatch, Icing, Loam, Loop, Malachite, Marlin, Morph, Myrid, Paisley, Parade, Patchwork, Rings, Sludge, Spade, Spinner, Spirit, Sugarplum, Swallowtail, Toxin, Trail, Weaver
 
 SECONDARY / RARE:
-Alloy, Bee, Butterfly, Chalice, Constellation, Crown, Facet, Flicker, Jester, Lode, Lumen, Sarcophagus, Shimmer, Warp, Woven
+Alloy, Bee, Butterfly, Chalice, Constellation, Crown, Facet, Flicker, Jester, Kylix, Lode, Lumen, Sarcophagus, Shimmer, Warp, Woven
 
 
 
@@ -30,10 +30,10 @@ TERTIARY / COMMON:
 Barnacle, Chitin, Contour, Darts, Kumo, Peacock, Points, Quagga, Shardflank, Terracotta, Thylacine, Topcoat, Trimmings, Underbelly, Wool
 
 TERTIARY / UNCOMMON:
-Agate, Antlers, Beard, Braids, Crackle, Crest, Eclosion, Fangs, Fishbone, Gecko, Gembond, Ghost, Jellyfish, Lace, Okapi, Paradise, Plating, Pufferfish, Rift, Ringlets, Rooster, Runes, Smoke, Sparkle, Spines, Stinger, Sunsail, Thorns, Whiskers, Willow, Wintercoat
+Agate, Antlers, Beard, Braids, Crackle, Crest, Eclosion, Fangs, Fishbone, Gecko, Gembond, Ghost, Jellyfish, Lace, Okapi, Paradise, Plating, Pufferfish, Rift, Ringlets, Rooster, Runes, Smoke, Sparkle, Spines, Stinger, Sunsail, Thorns, Whiskers, Willow, Wintercoat, Quartz
 
 TERTIARY / LIMITED:
-Angler, Batty, Beetle, Blossom, Branches, Brightshine, Capsule, Carnivore, Coral, Crystalline, Dewlap, Featherbeard, Firebreather, Firefly, Flameforger, Flames, Flecks, Flutter, Gliders, Greenskeeper, Keel, Magpie, Mandibles, Mistral, Moss, Mucous, Nudibranch, Pachy, Polkadot, Polypore, Porcelain, Porcupine, Riot, Rockbreaker, Scales, Scorpion, Scuttle, Shark, Skeletal, Skuttle, Smirch, Squiggle, Starfall, Thundercrack, Topscale, Trickmurk, Tusked, Veined, Warrior, Wavecrest, Weathered, Webmane, Yarn
+Angler, Bark, Batty, Beetle, Blossom, Branches, Brightshine, Capsule, Carnivore, Coral, Crystalline, Dewlap, Featherbeard, Firebreather, Firefly, Flameforger, Flames, Flecks, Flutter, Gliders, Greenskeeper, Hoard, Keel, Magpie, Mandibles, Maw, Mistral, Moss, Mucous, Nudibranch, Pachy, Polkadot, Polypore, Porcelain, Porcupine, Riot, Rockbreaker, Scales, Scorpion, Scuttle, Shark, Skeletal, Skuttle, Smirch, Squiggle, Starfall, Thundercrack, Topscale, Trickmurk, Tusked, Veined, Warrior, Wavecrest, Weathered, Webmane, Yarn
 
 TERTIARY / RARE:
-Augment, Belfry, Candlelight, Circuit, Deco, Diaphanous, Eclipse, Fans, Filigree, Frills, Glimmer, Glitch, Glowtail, Gnarlhorns, Harp, Hornet, Jewels, Koi, Medusa, Mist, Monarch, Mop, Opal, Ornaments, Overgrow, Pinions, Plumage, Remora, Sailfin, Soap, Space, Spectre, Spores, Stained, Tentacles, Veil, Wish, Wraith
+Armor, Augment, Belfry, Candlelight, Chimera, Circuit, Deco, Diaphanous, Eclipse, Fans, Filigree, Frills, Glimmer, Glitch, Glowtail, Gnarlhorns, Harp, Hornet, Jewels, Kelpie, Koi, Medusa, Mist, Monarch, Mop, Opal, Ornaments, Overgrow, Pinions, Plumage, Remora, Sailfin, Soap, Space, Spectre, Spores, Stained, Tentacles, Veil, Vitrail, Wish, Wraith
