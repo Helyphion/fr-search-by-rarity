@@ -33,7 +33,7 @@ TERTIARY / UNCOMMON:
 Agate, Antlers, Beard, Braids, Crackle, Crest, Eclosion, Fangs, Fishbone, Gecko, Gembond, Ghost, Jellyfish, Lace, Okapi, Paradise, Plating, Pufferfish, Rift, Ringlets, Rooster, Runes, Smoke, Sparkle, Spines, Stinger, Sunsail, Thorns, Whiskers, Willow, Wintercoat, Quartz
 
 TERTIARY / LIMITED:
-Angler, Bark, Batty, Beetle, Blossom, Branches, Brightshine, Capsule, Carnivore, Coral, Crystalline, Dewlap, Featherbeard, Firebreather, Firefly, Flameforger, Flames, Flecks, Flutter, Gliders, Greenskeeper, Hoard, Keel, Magpie, Mandibles, Maw, Mistral, Moss, Mucous, Nudibranch, Pachy, Polkadot, Polypore, Porcelain, Porcupine, Riot, Rockbreaker, Scales, Scorpion, Scuttle, Shark, Skeletal, Skuttle, Smirch, Squiggle, Starfall, Thundercrack, Topscale, Trickmurk, Tusked, Veined, Warrior, Wavecrest, Weathered, Webmane, Yarn
+Angler, Bark, Batty, Beetle, Blossom, Branches, Brightshine, Capsule, Carnivore, Coral, Crystalline, Dewlap, Featherbeard, Firebreather, Firefly, Flameforger, Flames, Flecks, Flutter, Gliders, Greenskeeper, Hoard, Keel, Magpie, Mandibles, Maw, Mistral, Moss, Mucous, Nudibranch, Pachy, Polkadot, Polypore, Porcelain, Porcupine, Riot, Rockbreaker, Scales, Scorpion, Scuttle, Shark, Skeletal, Skuttle, Smirch, Squiggle, Starfall, Sweet, Thundercrack, Topscale, Trickmurk, Tusked, Veined, Warrior, Wavecrest, Weathered, Webmane, Yarn
 
 TERTIARY / RARE:
 Armor, Augment, Belfry, Candlelight, Chimera, Circuit, Deco, Diaphanous, Eclipse, Fans, Filigree, Frills, Glimmer, Glitch, Glowtail, Gnarlhorns, Harp, Hornet, Jewels, Kelpie, Koi, Medusa, Mist, Monarch, Mop, Opal, Ornaments, Overgrow, Pinions, Plumage, Remora, Sailfin, Soap, Space, Spectre, Spores, Stained, Tentacles, Veil, Vitrail, Wish, Wraith
