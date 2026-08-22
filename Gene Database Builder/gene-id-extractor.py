@@ -108,8 +108,9 @@ def addAncientGeneIDs(slot, geneList):
         # extracts the gene name and ID from the line of HTML
         geneID = int(x.split('"')[1])
         # this looks so fuckass but I swear it makes sense (it splits the line at spaces to separate info, then trims some characters off the ends to get just the name)
-        geneName = x.lower().split(' ')[4][19:]
-        geneBreed = x.lower().split(' ')[5][1:-10]
+        # the one for geneName now splits differently because fuckin "Eye Spots" has a space in its name so it wasn't getting parsed correctly..
+        geneName = x.lower().split('>')[1].split(' (')[0]
+        geneBreed = x.lower().split('(')[1][:-10]
 
         # cycles through rarities to find the entry of the given gene, appends an entry for the given ancient breed
         for y in range(4):
