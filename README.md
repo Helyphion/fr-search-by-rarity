@@ -10,6 +10,7 @@ If you've ever wanted to make a breeding pair with genes of equal rarities, but 
 
 
 ### Changelog
+- **22-08-2026** // updated database for Chorus breed release + some gene changes, fixed Eye Spots bug
 - **27-07-2026** // added toggles for individual modern breeds (suggested by Volpe)
 - **14-07-2026** // launched site with currently available genes & breeds
 
