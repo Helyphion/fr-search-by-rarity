@@ -12,7 +12,8 @@ If you're curious about the source code of the site, you can find it [url=https:
 [center][pinglist=69246][/center]
 
 [color=transparent]_[/color] [size=5][b]CHANGELOG[/b][/size]
-[color=transparent]__[/color] [b]22/07/2026[/b] thread opened, pinglist created
+[color=transparent]__[/color] [b]22/08/2026[/b] updated for Chorus release + some gene ports, fixed Eye Spots bug
+[color=transparent]__[/color] [size=2][b]22/07/2026[/b] thread opened, pinglist created[/size]
 [color=transparent]__[/color] [size=2][b]14/07/2026[/b] website launched[/size]
 
 
