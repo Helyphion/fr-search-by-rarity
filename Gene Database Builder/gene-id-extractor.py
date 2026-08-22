@@ -48,6 +48,23 @@ for x in geneNames:
 # this does rely on there being exactly 12 lines of gene data in the plaintext file to work correctly, just keep that in mind
 
 
+def cleanUpInputFile(path):
+    with open(path, "r") as file:
+        fileContents = file.read().splitlines()
+
+    cleanedFile = ""
+
+    for line in fileContents:
+        if 'value="0"' not in line:
+            if "selected" in line:
+                cleanedFile += line.strip().replace('selected="selected" ', '') + "\n"
+            else:
+                cleanedFile += line.strip() + "\n"
+    
+    with open(path, "w") as file:
+        file.write(cleanedFile[:-1])
+
+
 def addModernGeneIDs(slot, geneList):
     rar = 0
     for x in geneList:
@@ -64,6 +81,12 @@ def addModernGeneIDs(slot, geneList):
             else:
                 rar += 1
         rar = 0
+
+
+# trims whitespace, removes Basic, removes "selected" tag before further processing
+cleanUpInputFile("data/modern-prims-html.txt")
+cleanUpInputFile("data/modern-secs-html.txt")
+cleanUpInputFile("data/modern-terts-html.txt")
 
 with open("data/modern-prims-html.txt", "r") as file:
     modernPrims = file.read().splitlines()
@@ -96,6 +119,12 @@ def addAncientGeneIDs(slot, geneList):
             else:
                 rar += 1
         rar = 0
+
+
+# trims whitespace, removes "selected" tag before further processing
+cleanUpInputFile("data/ancient-prims-html.txt")
+cleanUpInputFile("data/ancient-secs-html.txt")
+cleanUpInputFile("data/ancient-terts-html.txt")
 
 with open("data/ancient-prims-html.txt", "r") as file:
     ancientPrims = file.read().splitlines()
