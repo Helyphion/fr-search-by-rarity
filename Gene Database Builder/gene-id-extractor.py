@@ -78,8 +78,11 @@ def addModernGeneIDs(slot, geneList):
             if geneName in outputDict[slot][rarities[rar]]:
                 outputDict[slot][rarities[rar]][geneName] = {"modern": geneID}
                 break
-            else:
+            elif rar < 3:
                 rar += 1
+            # notifies if a gene from the html input file couldn't be matched to any rarity
+            else:
+                print(f'{slot} gene "{geneName}" (modern) could not be assigned to a rarity. did you add it to all-genes-plaintext.txt?')
         rar = 0
 
 
@@ -117,8 +120,11 @@ def addAncientGeneIDs(slot, geneList):
             if geneName in outputDict[slot][rarities[rar]]:
                 outputDict[slot][rarities[rar]][geneName][geneBreed] = geneID
                 break
-            else:
+            elif rar < 3:
                 rar += 1
+            # notifies if a gene from the html input file couldn't be matched to any rarity
+            else:
+                print(f'{slot} gene "{geneName}" ({geneBreed}) could not be assigned to a rarity. did you add it to all-genes-plaintext.txt?')
         rar = 0
 
 
