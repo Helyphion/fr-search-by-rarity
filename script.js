@@ -68,6 +68,34 @@ function populateModernCollapsibles() {
 
 }
 
+function populateAncientBreeds() {
+
+    const ancientBreeds = breedDatabase["ancient"];
+    for (const breed of Object.keys(ancientBreeds)) {
+
+        const parentDiv = document.getElementById("ancient-breed");
+
+        const optionDiv = document.createElement("div");
+        optionDiv.className = "option";
+
+        const radioButton = document.createElement("input");
+        radioButton.type = "radio";
+        radioButton.name = "breed";
+        radioButton.value = breed;
+
+        const label = document.createElement("label");
+        label.htmlFor = breed;
+        label.textContent = breed.charAt(0).toUpperCase() + breed.slice(1);
+
+        optionDiv.appendChild(radioButton);
+        optionDiv.append(" ");
+        optionDiv.appendChild(label);
+
+        parentDiv.appendChild(optionDiv);
+    }
+
+}
+
 
 function updateCollapsedBreeds(box) {
 
@@ -109,15 +137,16 @@ function refreshActiveBreed(givenForm) {
         for (const rarity of Object.values(breedDatabase["modern"])) {
             for (const breed of Object.keys(rarity)) {
                 for (const chosenBreed of checkedBoxes) {
-                    if (chosenBreed === breed) {
+                    if (breed === chosenBreed) {
                         searchFragment += rarity[breed] + "%2C";
                     }
                 }
             }
         }
 
-        
+        // trim off trailing "%2C"
         searchFragment = searchFragment.slice(0, -3);
+
         fragmentStorage.d_breed = searchFragment;
         console.log(searchFragment);
 
@@ -150,6 +179,7 @@ function refreshActiveGenes(geneSlot, givenForm) {
         }
         else {
             let currentRarity = geneDatabase[geneSlot][checkedBoxes[i]];
+            
             for (const [gene, breeds] of Object.entries(currentRarity)) {
                 
                 // console.log(gene, breeds);
@@ -255,6 +285,7 @@ async function main() {
     breedDatabase = await fetchJsonData("breed-rarities.json");
 
     populateModernCollapsibles();
+    populateAncientBreeds();
 
     primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm));
     secRarityForm.addEventListener("change", () => refreshActiveGenes("secondary", secRarityForm));
