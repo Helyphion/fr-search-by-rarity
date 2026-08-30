@@ -51,8 +51,12 @@ export function refreshActiveBreed() {
         const formContents = new FormData( document.getElementById("ancient-breed") );
         selectedBreed = formContents.get("breed");
 
-        // TODO: implement adding ID to search after all; otherwise is inconsistent with behavior of modern breeds when no genes are selected
-        fragmentStorage.d_breed = "";
+        for (const breed of Object.keys(breedDatabase["ancient"])) {
+            if (breed === selectedBreed) {
+                fragmentStorage.d_breed = breedDatabase["ancient"][breed];
+                break;
+            }
+        }
     }
 
     // TODO: refactor, augh
