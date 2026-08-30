@@ -16,6 +16,7 @@ const fragmentStorage = {
 
 
 let selectedBreed = "modern";
+
 export function refreshActiveBreed() {
     let searchFragment = "";
 
@@ -27,10 +28,13 @@ export function refreshActiveBreed() {
 
         const formContents = new FormData( document.getElementById("breed-rarity") );
         const checkedBoxes = formContents.getAll("breed");
+        // formContents.getAll() notably only returns *checked* boxes, not all inputs with the name "breed"
 
-        // that's a lotta nesting.
+        // iterate over modern subtree of breed database
         for (const rarity of Object.values(breedDatabase["modern"])) {
             for (const breed of Object.keys(rarity)) {
+                // iterate over list of checked breeds to compare to each entry of the breed database
+                // and add to search if they're the same
                 for (const chosenBreed of checkedBoxes) {
                     if (breed === chosenBreed) {
                         searchFragment += rarity[breed] + "%2C";
@@ -38,8 +42,10 @@ export function refreshActiveBreed() {
                 }
             }
         }
+        // that's a lotta nesting.
 
-        // trim off trailing "%2C"
+
+        // trim off the trailing "%2C"
         searchFragment = searchFragment.slice(0, -3);
 
         fragmentStorage.d_breed = searchFragment;
@@ -51,13 +57,14 @@ export function refreshActiveBreed() {
         const formContents = new FormData( document.getElementById("ancient-breed") );
         selectedBreed = formContents.get("breed");
 
+        // scan ancient subtree of breed database for the selected breed
+        // (more straightforward bc no rarities + no multiselect)
         for (const breed of Object.keys(breedDatabase["ancient"])) {
             if (breed === selectedBreed) {
                 fragmentStorage.d_breed = breedDatabase["ancient"][breed];
                 break;
             }
         }
-    }
 
         // TODO: refactor, augh
         const primRarityForm = document.getElementById("prim-rarity");
@@ -77,36 +84,35 @@ export function refreshActiveGenes(geneSlot, givenForm) {
 
     const formContents = new FormData(givenForm);
     const checkedBoxes = formContents.getAll("rarity");
+    // formContents.getAll() notably only returns *checked* boxes, not all possible inputs
 
+    // go through all selected boxes
     for (let i = 0; i < checkedBoxes.length; i++) {
-
-        if (checkedBoxes[i] == "basic") {
+        let currentRarity = checkedBoxes[i];
+        // Basic gene is always ID 0
+        // (and is not in the gene database, so needs to be added to search separately)
+        if (currentRarity == "basic") {
             searchFragment += "0%2C";
         }
         else {
-            let currentRarity = geneDatabase[geneSlot][checkedBoxes[i]];
-            
-            for (const [gene, breeds] of Object.entries(currentRarity)) {
-                
-                // TODO: pls put comments on this wth
-                // console.log(gene, breeds);
-                for (const breed of Object.keys(breeds)) {
-
+            // for each gene in the selected rarity, get list of breeds that have it
+            for (const [gene, breedsList] of Object.entries( geneDatabase[geneSlot][currentRarity] )) {
+                for (const breed of Object.keys(breedsList)) {
+                    // adds the breed-specific ID of a gene, if it has an entry for the currently selected breed
                     if (breed === selectedBreed) {
-                        // console.log(breeds[breed]);
-                        searchFragment += breeds[breed] + "%2C";
+                        searchFragment += breedsList[breed] + "%2C";
+                        // "%2C" is how gene IDs are chained in Flight Rising's search links
                     }
-
                 }
-
             }
         }
 
     }
 
+    // trim off the trailing "%2C"
     searchFragment = searchFragment.slice(0, -3);
 
-    // write assembled searchFragment to global variables
+    // save assembled searchFragment to global storage variables
     switch (geneSlot) {
         case "primary":
             fragmentStorage.d_bodygene = searchFragment;
@@ -119,6 +125,8 @@ export function refreshActiveGenes(geneSlot, givenForm) {
             break;
     }
 
+    // refreshing the utils every time is not strictly necessary, 
+    // but this way I make sure they're always refreshed when they should be
     refreshUtilities();
 }
 
@@ -131,17 +139,17 @@ export function refreshUtilities() {
     const gen1Choice = formContents.get("g1");
     const rtbChoice = formContents.get("breeding-status");
 
+    // if only one is chosen, sets gender id to 0 if male, or 1 if female
     if (chosenGenders.length === 1) {
-        // if only one is chosen, sets gender id to 0 if male, or 1 if female
         chosenGenders[0] === "male" ? fragmentStorage.utils.d_gender = "0" : fragmentStorage.utils.d_gender = "1";
     } else {
+        // clears filter if both are selected (functionally equivalent to adding both)
         fragmentStorage.utils.d_gender = "";
     }
 
     // sets to g2+ only (0) if exclude g1s requested, clears if not
     gen1Choice === "exclude" ? fragmentStorage.utils.d_gen1 = "0" : fragmentStorage.utils.d_gen1 = "";
 
-    // sets 1 if rtb requested, clears if not
     rtbChoice === "rtb" ? fragmentStorage.utils.d_rtb = "1" : fragmentStorage.utils.d_rtb = "";
 
     assembleSearchLink();
@@ -154,13 +162,14 @@ function assembleSearchLink() {
     let searchString = ""
 
     for (const [key, value] of Object.entries(fragmentStorage)) {
+        // only add fragments whose value has been edited, and skip over "utils" sub-Map
         if (value !== "" && key !== "utils") {
             searchString += key + "=" + value + "&";
         }
     }
-    // set link if any parameters are given; clear it if not
-    if (searchString !== "") {
 
+    if (searchString !== "") {
+        // put together link if any parameters are given
         for (const [key, value] of Object.entries(fragmentStorage.utils)) {
             if (value !== "") {
                 searchString += key + "=" + value + "&";
@@ -170,7 +179,9 @@ function assembleSearchLink() {
         searchButton.href = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
 
     } else {
+        // clear link & disable button if no parameters are selected
         searchButton.href = "";
         searchButton.classList.add("disabled");
     }
+
 }
