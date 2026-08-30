@@ -153,7 +153,7 @@ function assembleSearchLink() {
     let searchString = ""
 
     for (const [key, value] of Object.entries(fragmentStorage)) {
-        if (value !== "") {
+        if (value !== "" && key !== "utils") {
             searchString += key + "=" + value + "&";
         }
     }
