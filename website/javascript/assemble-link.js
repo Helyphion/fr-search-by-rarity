@@ -59,15 +59,16 @@ export function refreshActiveBreed() {
         }
     }
 
-    // TODO: refactor, augh
-    const primRarityForm = document.getElementById("prim-rarity");
-    const secRarityForm = document.getElementById("sec-rarity");
-    const tertRarityForm = document.getElementById("tert-rarity");
+        // TODO: refactor, augh
+        const primRarityForm = document.getElementById("prim-rarity");
+        const secRarityForm = document.getElementById("sec-rarity");
+        const tertRarityForm = document.getElementById("tert-rarity");
 
-    // reload all gene IDs when breed is changed
-    refreshActiveGenes("primary", primRarityForm);
-    refreshActiveGenes("secondary", secRarityForm);
-    refreshActiveGenes("tertiary", tertRarityForm);
+        // reload all gene IDs whenever a different ancient breed is selected
+        refreshActiveGenes("primary", primRarityForm);
+        refreshActiveGenes("secondary", secRarityForm);
+        refreshActiveGenes("tertiary", tertRarityForm);
+    }
 }
 
 
