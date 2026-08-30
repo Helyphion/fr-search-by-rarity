@@ -1,18 +1,17 @@
 import { geneDatabase, breedDatabase } from "./main.js";
 
 
-// TODO: refactor fragment storages to be 1 Map probably..?
 const fragmentStorage = {
     d_breed: "",
     d_bodygene: "",
     d_winggene: "",
-    d_tertgene: ""
-};
+    d_tertgene: "",
 
-const utilFragmentStorage = {
-    d_gender: "",
-    d_rtb: "",
-    d_gen1: ""
+    utils: {
+        d_gender: "",
+        d_rtb: "",
+        d_gen1: ""
+    }
 };
 
 
@@ -129,16 +128,16 @@ export function refreshUtilities() {
 
     if (chosenGenders.length === 1) {
         // if only one is chosen, sets gender id to 0 if male, or 1 if female
-        chosenGenders[0] === "male" ? utilFragmentStorage.d_gender = "0" : utilFragmentStorage.d_gender = "1";
+        chosenGenders[0] === "male" ? fragmentStorage.utils.d_gender = "0" : fragmentStorage.utils.d_gender = "1";
     } else {
-        utilFragmentStorage.d_gender = "";
+        fragmentStorage.utils.d_gender = "";
     }
 
     // sets to g2+ only (0) if exclude g1s requested, clears if not
-    gen1Choice === "exclude" ? utilFragmentStorage.d_gen1 = "0" : utilFragmentStorage.d_gen1 = "";
+    gen1Choice === "exclude" ? fragmentStorage.utils.d_gen1 = "0" : fragmentStorage.utils.d_gen1 = "";
 
     // sets 1 if rtb requested, clears if not
-    rtbChoice === "rtb" ? utilFragmentStorage.d_rtb = "1" : utilFragmentStorage.d_rtb = "";
+    rtbChoice === "rtb" ? fragmentStorage.utils.d_rtb = "1" : fragmentStorage.utils.d_rtb = "";
 
     assembleSearchLink();
 }
@@ -157,7 +156,7 @@ function assembleSearchLink() {
     // set link if any parameters are given; clear it if not
     if (searchString !== "") {
 
-        for (const [key, value] of Object.entries(utilFragmentStorage)) {
+        for (const [key, value] of Object.entries(fragmentStorage.utils)) {
             if (value !== "") {
                 searchString += key + "=" + value + "&";
             }
