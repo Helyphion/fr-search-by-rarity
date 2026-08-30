@@ -49,7 +49,6 @@ export function refreshActiveBreed() {
         searchFragment = searchFragment.slice(0, -3);
 
         fragmentStorage.d_breed = searchFragment;
-        console.log(searchFragment);
 
 
     } else if (activeTabName === "ancient") {
@@ -66,23 +65,18 @@ export function refreshActiveBreed() {
             }
         }
 
-        // TODO: refactor, augh
-        const primRarityForm = document.getElementById("prim-rarity");
-        const secRarityForm = document.getElementById("sec-rarity");
-        const tertRarityForm = document.getElementById("tert-rarity");
-
         // reload all gene IDs whenever a different ancient breed is selected
-        refreshActiveGenes("primary", primRarityForm);
-        refreshActiveGenes("secondary", secRarityForm);
-        refreshActiveGenes("tertiary", tertRarityForm);
+        refreshActiveGenes("primary");
+        refreshActiveGenes("secondary");
+        refreshActiveGenes("tertiary");
     }
 }
 
 
-export function refreshActiveGenes(geneSlot, givenForm) {
+export function refreshActiveGenes(geneSlot) {
     let searchFragment = "";
 
-    const formContents = new FormData(givenForm);
+    const formContents = new FormData( document.getElementById(geneSlot) );
     const checkedBoxes = formContents.getAll("rarity");
     // formContents.getAll() notably only returns *checked* boxes, not all possible inputs
 
@@ -177,6 +171,7 @@ function assembleSearchLink() {
         }
         searchButton.classList.remove("disabled");
         searchButton.href = `https://www1.flightrising.com/auction-house/buy/realm/dragons?${searchString}collapse=1`;
+        console.log(searchString);
 
     } else {
         // clear link & disable button if no parameters are selected

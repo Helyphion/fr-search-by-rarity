@@ -10,18 +10,13 @@ function createEventListener(id, type, funct) {
 
 export function setUpEventListeners() {
 
-    // TODO: refacor this first chunk; gotta refactor refreshActiveGenes() to not require the nRarityForm parameter
-    // createEventListener("prim-rarity", "change", () => refreshActiveGenes("primary", primRarityForm));
-    const primRarityForm = document.getElementById("prim-rarity");
-    const secRarityForm = document.getElementById("sec-rarity");
-    const tertRarityForm = document.getElementById("tert-rarity");
+    // note: arrow functions are necessary for parameters to work in Event Listeners
 
-    // arrow functions are necessary for parameters to work
-    primRarityForm.addEventListener("change", () => refreshActiveGenes("primary", primRarityForm));
-    secRarityForm.addEventListener("change", () => refreshActiveGenes("secondary", secRarityForm));
-    tertRarityForm.addEventListener("change", () => refreshActiveGenes("tertiary", tertRarityForm));
-    
     createEventListener("ancient-breed", "change", () => refreshActiveBreed());
+
+    createEventListener("primary", "change", () => refreshActiveGenes("primary"));
+    createEventListener("secondary", "change", () => refreshActiveGenes("secondary"));
+    createEventListener("tertiary", "change", () => refreshActiveGenes("tertiary"));
 
     createEventListener("utilities", "change", () => refreshUtilities());
 
@@ -35,9 +30,9 @@ export function setUpEventListeners() {
     createEventListener("clear-breed", "click", () => clearAllBoxes("breed-rarity"));
     createEventListener("clear-breed", "click", () => clearAllBoxes("ancient-breed"));
 
-    createEventListener("clear-prim", "click", () => clearAllBoxes("prim-rarity"));
-    createEventListener("clear-sec", "click", () => clearAllBoxes("sec-rarity"));
-    createEventListener("clear-tert", "click", () => clearAllBoxes("tert-rarity"));
+    createEventListener("clear-prim", "click", () => clearAllBoxes("primary"));
+    createEventListener("clear-sec", "click", () => clearAllBoxes("secondary"));
+    createEventListener("clear-tert", "click", () => clearAllBoxes("tertiary"));
 }
 
 
