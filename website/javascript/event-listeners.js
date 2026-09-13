@@ -33,22 +33,26 @@ export function setUpEventListeners() {
     createEventListener("clear-prim", "click", () => clearAllBoxes("primary"));
     createEventListener("clear-sec", "click", () => clearAllBoxes("secondary"));
     createEventListener("clear-tert", "click", () => clearAllBoxes("tertiary"));
+
+    
+    setUpCollapsibleSync();
 }
 
 
-export function TEMP() {
+export function setUpCollapsibleSync() {
 
-    // TODO: refactor this chunk because this is not particularly readable
     const breedRarityBoxes = document.querySelector("#breed-rarity").querySelectorAll('input[name="rarity"]');
     // add separate eventListener for each collapsible
-    for (const box of breedRarityBoxes) {
-        box.addEventListener("change", () => updateCollapsedBreeds(box));
+    for (const parentBox of breedRarityBoxes) {
+
+        parentBox.addEventListener("change", () => updateCollapsedBreeds(parentBox));
         
-        // add eventListeners for child boxes to sync parent boxes if all are selected/unselected
-        const childBoxes = box.parentElement.querySelector(".collapse").querySelectorAll("input");
+        // add eventListeners for all child boxes to make parent boxes sync if all are selected/unselected
+        const childBoxes = parentBox.parentElement.querySelector(".collapse").querySelectorAll("input");
         for (const child of childBoxes) {
-            child.addEventListener("change", () => updateParentBoxes(box, childBoxes));
+            child.addEventListener("change", () => updateParentBoxes(parentBox, childBoxes));
         }
+
     }
 
 }

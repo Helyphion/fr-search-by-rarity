@@ -1,4 +1,4 @@
-import { refreshActiveBreed } from "./assemble-link.js";
+import { refreshActiveBreed, refreshActiveGenes } from "./assemble-link.js";
 
 
 export function updateCollapsedBreeds(box) {
@@ -24,7 +24,7 @@ export function updateParentBoxes(box, childBoxes) {
 }
 
 
-
+// function that fires when the little trashcan button is clicked on one of the sections
 export function clearAllBoxes(givenId) {
     const form = document.getElementById(givenId);
     const allBoxes = form.querySelectorAll("input");
@@ -34,4 +34,5 @@ export function clearAllBoxes(givenId) {
     }
 
     refreshActiveBreed();
+    refreshActiveGenes();
 }

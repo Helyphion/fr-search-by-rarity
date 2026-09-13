@@ -1,5 +1,5 @@
 import { populateModernCollapsibles, populateAncientBreeds } from "./populate-breeds.js";
-import { setUpEventListeners, TEMP } from "./event-listeners.js";
+import { setUpEventListeners } from "./event-listeners.js";
 
 async function fetchJsonData(file) {
     const response = await fetch(file);
@@ -9,13 +9,13 @@ async function fetchJsonData(file) {
 const geneDatabase = await fetchJsonData("../data/gene-rarities.json");
 const breedDatabase = await fetchJsonData("../data/breed-rarities.json");
 
+
 function main() {
 
     populateModernCollapsibles();
     populateAncientBreeds();
 
     setUpEventListeners();
-    TEMP(); // needs to be refactored :[
 
     // Bootstrap code for initialising tooltips
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
