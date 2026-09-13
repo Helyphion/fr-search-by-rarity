@@ -47,8 +47,11 @@ export function refreshActiveBreed() {
 
         // trim off the trailing "%2C"
         searchFragment = searchFragment.slice(0, -3);
-
+        
         fragmentStorage.d_breed = searchFragment;
+
+        // skip refreshing genes because they stay the same for modern; go straight to utils
+        refreshUtilities();
 
 
     } else if (activeTabName === "ancient") {

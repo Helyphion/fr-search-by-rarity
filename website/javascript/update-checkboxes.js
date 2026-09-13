@@ -34,5 +34,5 @@ export function clearAllBoxes(givenId) {
     }
 
     refreshActiveBreed();
-    refreshActiveGenes();
+    refreshActiveGenes(givenId);
 }
