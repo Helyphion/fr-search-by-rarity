@@ -6,8 +6,8 @@ async function fetchJsonData(file) {
     return await response.json();
 }
 
-const geneDatabase = await fetchJsonData("./data/gene-rarities.json");
-const breedDatabase = await fetchJsonData("./data/breed-rarities.json");
+const geneDatabase = await fetchJsonData("../data/gene-rarities.json");
+const breedDatabase = await fetchJsonData("../data/breed-rarities.json");
 
 
 function main() {
