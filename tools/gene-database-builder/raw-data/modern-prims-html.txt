@@ -1,6 +1,7 @@
 <option  value="6" data-breed-type="modern" data-breed-id="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">Bar</option>
 <option  value="232" data-breed-type="modern" data-breed-id="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">Boa</option>
 <option  value="110" data-breed-type="modern" data-breed-id="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">Boulder</option>
+<option  value="609" data-breed-type="modern" data-breed-id="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">Caterpillar</option>
 <option  value="412" data-breed-type="modern" data-breed-id="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">Checkers</option>
 <option  value="10" data-breed-type="modern" data-breed-id="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">Cherub</option>
 <option  value="337" data-breed-type="modern" data-breed-id="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">Chord</option>

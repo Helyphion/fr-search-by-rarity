@@ -517,6 +517,7 @@
 <option  value="557" data-breed-type="ancient" data-breed-id="28">Eclipse (Vigil)</option>
 <option  value="568" data-breed-type="ancient" data-breed-id="28">Fangs (Vigil)</option>
 <option  value="559" data-breed-type="ancient" data-breed-id="28">Firebreather (Vigil)</option>
+<option  value="672" data-breed-type="ancient" data-breed-id="28">Flameforger (Vigil)</option>
 <option  value="560" data-breed-type="ancient" data-breed-id="28">Gecko (Vigil)</option>
 <option  value="561" data-breed-type="ancient" data-breed-id="28">Ghost (Vigil)</option>
 <option  value="558" data-breed-type="ancient" data-breed-id="28">Glitch (Vigil)</option>
@@ -605,6 +606,7 @@
 <option  value="646" data-breed-type="ancient" data-breed-id="30">Featherbeard (Chorus)</option>
 <option  value="663" data-breed-type="ancient" data-breed-id="30">Firebreather (Chorus)</option>
 <option  value="666" data-breed-type="ancient" data-breed-id="30">Fishbone (Chorus)</option>
+<option  value="671" data-breed-type="ancient" data-breed-id="30">Flameforger (Chorus)</option>
 <option  value="664" data-breed-type="ancient" data-breed-id="30">Flecks (Chorus)</option>
 <option  value="654" data-breed-type="ancient" data-breed-id="30">Flutter (Chorus)</option>
 <option  value="665" data-breed-type="ancient" data-breed-id="30">Ghost (Chorus)</option>
