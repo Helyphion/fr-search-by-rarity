@@ -20,7 +20,7 @@ outputDict["tertiary"]["limited"] = {}
 outputDict["tertiary"]["rare"] = {}
 
 
-with open("data/all-genes-plaintext.txt", "r") as file:
+with open("raw-data/all-genes-rarities.txt", "r") as file:
     allGenesPlaintextFile = file.read().splitlines()
 
 geneNames = []
@@ -82,20 +82,20 @@ def addModernGeneIDs(slot, geneList):
                 rar += 1
             # notifies if a gene from the html input file couldn't be matched to any rarity
             else:
-                print(f'{slot} gene "{geneName}" (modern) could not be assigned to a rarity. did you add it to all-genes-plaintext.txt?')
+                print(f'{slot} gene "{geneName}" (modern) could not be assigned to a rarity. did you add it to all-genes-rarities.txt?')
         rar = 0
 
 
 # trims whitespace, removes Basic, removes "selected" tag before further processing
-cleanUpInputFile("data/modern-prims-html.txt")
-cleanUpInputFile("data/modern-secs-html.txt")
-cleanUpInputFile("data/modern-terts-html.txt")
+cleanUpInputFile("raw-data/modern-prims-html.txt")
+cleanUpInputFile("raw-data/modern-secs-html.txt")
+cleanUpInputFile("raw-data/modern-terts-html.txt")
 
-with open("data/modern-prims-html.txt", "r") as file:
+with open("raw-data/modern-prims-html.txt", "r") as file:
     modernPrims = file.read().splitlines()
-with open("data/modern-secs-html.txt", "r") as file:
+with open("raw-data/modern-secs-html.txt", "r") as file:
     modernSecs = file.read().splitlines()
-with open("data/modern-terts-html.txt", "r") as file:
+with open("raw-data/modern-terts-html.txt", "r") as file:
     modernTerts = file.read().splitlines()
 
 addModernGeneIDs("primary", modernPrims)
@@ -124,20 +124,20 @@ def addAncientGeneIDs(slot, geneList):
                 rar += 1
             # notifies if a gene from the html input file couldn't be matched to any rarity
             else:
-                print(f'{slot} gene "{geneName}" ({geneBreed}) could not be assigned to a rarity. did you add it to all-genes-plaintext.txt?')
+                print(f'{slot} gene "{geneName}" ({geneBreed}) could not be assigned to a rarity. did you add it to all-genes-rarities.txt?')
         rar = 0
 
 
 # trims whitespace, removes "selected" tag before further processing
-cleanUpInputFile("data/ancient-prims-html.txt")
-cleanUpInputFile("data/ancient-secs-html.txt")
-cleanUpInputFile("data/ancient-terts-html.txt")
+cleanUpInputFile("raw-data/ancient-prims-html.txt")
+cleanUpInputFile("raw-data/ancient-secs-html.txt")
+cleanUpInputFile("raw-data/ancient-terts-html.txt")
 
-with open("data/ancient-prims-html.txt", "r") as file:
+with open("raw-data/ancient-prims-html.txt", "r") as file:
     ancientPrims = file.read().splitlines()
-with open("data/ancient-secs-html.txt", "r") as file:
+with open("raw-data/ancient-secs-html.txt", "r") as file:
     ancientSecs = file.read().splitlines()
-with open("data/ancient-terts-html.txt", "r") as file:
+with open("raw-data/ancient-terts-html.txt", "r") as file:
     ancientTerts = file.read().splitlines()
 
 addAncientGeneIDs("primary", ancientPrims)
