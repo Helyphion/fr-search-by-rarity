@@ -495,6 +495,7 @@
 <option  value="461" data-breed-type="ancient" data-breed-id="27">Sparkle (Cirrus)</option>
 <option  value="454" data-breed-type="ancient" data-breed-id="27">Spectre (Cirrus)</option>
 <option  value="459" data-breed-type="ancient" data-breed-id="27">Spores (Cirrus)</option>
+<option  value="674" data-breed-type="ancient" data-breed-id="27">Starfall (Cirrus)</option>
 <option  value="455" data-breed-type="ancient" data-breed-id="27">Thorns (Cirrus)</option>
 <option  value="477" data-breed-type="ancient" data-breed-id="27">Thundercrack (Cirrus)</option>
 <option  value="456" data-breed-type="ancient" data-breed-id="27">Topscale (Cirrus)</option>
@@ -626,6 +627,7 @@
 <option  value="653" data-breed-type="ancient" data-breed-id="30">Spectre (Chorus)</option>
 <option  value="651" data-breed-type="ancient" data-breed-id="30">Spines (Chorus)</option>
 <option  value="652" data-breed-type="ancient" data-breed-id="30">Stained (Chorus)</option>
+<option  value="673" data-breed-type="ancient" data-breed-id="30">Starfall (Chorus)</option>
 <option  value="669" data-breed-type="ancient" data-breed-id="30">Thylacine (Chorus)</option>
 <option  value="649" data-breed-type="ancient" data-breed-id="30">Tusked (Chorus)</option>
 <option  value="644" data-breed-type="ancient" data-breed-id="30">Underbelly (Chorus)</option>

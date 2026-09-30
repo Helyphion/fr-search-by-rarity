@@ -9,6 +9,7 @@
             "thorntail": 458
         },
         "caterpillar": {
+            "modern": 609,
             "gaoler": 391,
             "banescale": 388,
             "veilspun": 385,
@@ -293,6 +294,11 @@
             "chorus": 574
         },
         "criculaworm": {
+            "modern": 614,
+            "undertide": 613,
+            "aether": 610,
+            "sandsurge": 612,
+            "auraboa": 611,
             "dusthide": 551,
             "everlux": 351,
             "cirrus": 414,
@@ -897,6 +903,7 @@
             "chorus": 605
         },
         "larvae": {
+            "modern": 609,
             "gaoler": 392,
             "banescale": 388,
             "veilspun": 385,
@@ -1254,6 +1261,11 @@
             "chorus": 588
         },
         "silkspot": {
+            "modern": 610,
+            "undertide": 614,
+            "aether": 611,
+            "sandsurge": 612,
+            "auraboa": 613,
             "dusthide": 551,
             "everlux": 354,
             "cirrus": 414,
@@ -2070,7 +2082,9 @@
             "aether": 340,
             "sandsurge": 341,
             "dusthide": 483,
-            "cirrus": 482
+            "cirrus": 482,
+            "vigil": 672,
+            "chorus": 671
         },
         "flames": {
             "cirrus": 441,
@@ -2248,7 +2262,9 @@
             "aberration": 485,
             "aether": 209,
             "sandsurge": 210,
-            "auraboa": 342
+            "auraboa": 342,
+            "cirrus": 674,
+            "chorus": 673
         },
         "sweet": {
             "thorntail": 540

@@ -172,6 +172,7 @@
 <option  value="264" data-breed-type="ancient" data-breed-id="21">Chrysocolla (Undertide)</option>
 <option  value="218" data-breed-type="ancient" data-breed-id="21">Cinder (Undertide)</option>
 <option  value="265" data-breed-type="ancient" data-breed-id="21">Clown (Undertide)</option>
+<option  value="613" data-breed-type="ancient" data-breed-id="21">Criculaworm (Undertide)</option>
 <option  value="118" data-breed-type="ancient" data-breed-id="21">Crystal (Undertide)</option>
 <option  value="115" data-breed-type="ancient" data-breed-id="21">Fade (Undertide)</option>
 <option  value="122" data-breed-type="ancient" data-breed-id="21">Falcon (Undertide)</option>
@@ -218,6 +219,7 @@
 <option  value="320" data-breed-type="ancient" data-breed-id="22">Chrysocolla (Aether)</option>
 <option  value="163" data-breed-type="ancient" data-breed-id="22">Cinder (Aether)</option>
 <option  value="169" data-breed-type="ancient" data-breed-id="22">Clown (Aether)</option>
+<option  value="610" data-breed-type="ancient" data-breed-id="22">Criculaworm (Aether)</option>
 <option  value="321" data-breed-type="ancient" data-breed-id="22">Crystal (Aether)</option>
 <option  value="148" data-breed-type="ancient" data-breed-id="22">Fade (Aether)</option>
 <option  value="322" data-breed-type="ancient" data-breed-id="22">Falcon (Aether)</option>
@@ -265,6 +267,7 @@
 <option  value="195" data-breed-type="ancient" data-breed-id="23">Chrysocolla (Sandsurge)</option>
 <option  value="217" data-breed-type="ancient" data-breed-id="23">Cinder (Sandsurge)</option>
 <option  value="196" data-breed-type="ancient" data-breed-id="23">Clown (Sandsurge)</option>
+<option  value="612" data-breed-type="ancient" data-breed-id="23">Criculaworm (Sandsurge)</option>
 <option  value="399" data-breed-type="ancient" data-breed-id="23">Crystal (Sandsurge)</option>
 <option  value="191" data-breed-type="ancient" data-breed-id="23">Fade (Sandsurge)</option>
 <option  value="448" data-breed-type="ancient" data-breed-id="23">Falcon (Sandsurge)</option>
@@ -304,6 +307,7 @@
 <option  value="241" data-breed-type="ancient" data-breed-id="24">Caterpillar (Auraboa)</option>
 <option  value="455" data-breed-type="ancient" data-breed-id="24">Checkers (Auraboa)</option>
 <option  value="504" data-breed-type="ancient" data-breed-id="24">Cherub (Auraboa)</option>
+<option  value="611" data-breed-type="ancient" data-breed-id="24">Criculaworm (Auraboa)</option>
 <option  value="242" data-breed-type="ancient" data-breed-id="24">Fade (Auraboa)</option>
 <option  value="243" data-breed-type="ancient" data-breed-id="24">Falcon (Auraboa)</option>
 <option  value="244" data-breed-type="ancient" data-breed-id="24">Fern (Auraboa)</option>

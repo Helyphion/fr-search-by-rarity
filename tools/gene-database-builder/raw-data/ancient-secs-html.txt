@@ -203,6 +203,7 @@
 <option  value="120" data-breed-type="ancient" data-breed-id="21">Sarcophagus (Undertide)</option>
 <option  value="270" data-breed-type="ancient" data-breed-id="21">Saturn (Undertide)</option>
 <option  value="119" data-breed-type="ancient" data-breed-id="21">Seraph (Undertide)</option>
+<option  value="614" data-breed-type="ancient" data-breed-id="21">Silkspot (Undertide)</option>
 <option  value="277" data-breed-type="ancient" data-breed-id="21">Spire (Undertide)</option>
 <option  value="274" data-breed-type="ancient" data-breed-id="21">Striation (Undertide)</option>
 <option  value="275" data-breed-type="ancient" data-breed-id="21">Stripes (Undertide)</option>
@@ -248,6 +249,7 @@
 <option  value="234" data-breed-type="ancient" data-breed-id="22">Saddle (Aether)</option>
 <option  value="332" data-breed-type="ancient" data-breed-id="22">Safari (Aether)</option>
 <option  value="153" data-breed-type="ancient" data-breed-id="22">Saturn (Aether)</option>
+<option  value="611" data-breed-type="ancient" data-breed-id="22">Silkspot (Aether)</option>
 <option  value="336" data-breed-type="ancient" data-breed-id="22">Sludge (Aether)</option>
 <option  value="161" data-breed-type="ancient" data-breed-id="22">Spinner (Aether)</option>
 <option  value="335" data-breed-type="ancient" data-breed-id="22">Spire (Aether)</option>
@@ -290,6 +292,7 @@
 <option  value="204" data-breed-type="ancient" data-breed-id="23">Safari (Sandsurge)</option>
 <option  value="197" data-breed-type="ancient" data-breed-id="23">Saturn (Sandsurge)</option>
 <option  value="190" data-breed-type="ancient" data-breed-id="23">Seraph (Sandsurge)</option>
+<option  value="612" data-breed-type="ancient" data-breed-id="23">Silkspot (Sandsurge)</option>
 <option  value="208" data-breed-type="ancient" data-breed-id="23">Sludge (Sandsurge)</option>
 <option  value="441" data-breed-type="ancient" data-breed-id="23">Spinner (Sandsurge)</option>
 <option  value="187" data-breed-type="ancient" data-breed-id="23">Spire (Sandsurge)</option>
@@ -328,6 +331,7 @@
 <option  value="239" data-breed-type="ancient" data-breed-id="24">Saddle (Auraboa)</option>
 <option  value="566" data-breed-type="ancient" data-breed-id="24">Saturn (Auraboa)</option>
 <option  value="504" data-breed-type="ancient" data-breed-id="24">Seraph (Auraboa)</option>
+<option  value="613" data-breed-type="ancient" data-breed-id="24">Silkspot (Auraboa)</option>
 <option  value="503" data-breed-type="ancient" data-breed-id="24">Sludge (Auraboa)</option>
 <option  value="258" data-breed-type="ancient" data-breed-id="24">Striation (Auraboa)</option>
 <option  value="259" data-breed-type="ancient" data-breed-id="24">Stripes (Auraboa)</option>
