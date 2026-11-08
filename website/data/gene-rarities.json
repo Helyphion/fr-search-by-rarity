@@ -74,7 +74,8 @@
             "aether": 322,
             "sandsurge": 448,
             "auraboa": 243,
-            "dusthide": 301
+            "dusthide": 301,
+            "everlux": 618
         },
         "laced": {
             "modern": 26,
@@ -244,6 +245,7 @@
             "aether": 234,
             "sandsurge": 189,
             "auraboa": 239,
+            "everlux": 615,
             "thorntail": 462,
             "chorus": 572
         },
@@ -409,6 +411,7 @@
             "sandsurge": 206,
             "auraboa": 256,
             "dusthide": 557,
+            "everlux": 616,
             "thorntail": 480,
             "chorus": 599
         },
@@ -742,6 +745,7 @@
             "aether": 157,
             "auraboa": 250,
             "dusthide": 553,
+            "everlux": 617,
             "cirrus": 429,
             "vigil": 533,
             "chorus": 608
@@ -960,7 +964,8 @@
             "aether": 331,
             "sandsurge": 448,
             "auraboa": 243,
-            "dusthide": 301
+            "dusthide": 301,
+            "everlux": 618
         },
         "roan": {
             "cirrus": 439
@@ -1111,6 +1116,7 @@
             "sandsurge": 206,
             "auraboa": 256,
             "dusthide": 557,
+            "everlux": 616,
             "thorntail": 480,
             "chorus": 599
         },
@@ -1230,6 +1236,7 @@
             "aether": 234,
             "sandsurge": 189,
             "auraboa": 239,
+            "everlux": 615,
             "thorntail": 462,
             "chorus": 572
         },
@@ -1509,6 +1516,7 @@
             "aether": 157,
             "auraboa": 250,
             "dusthide": 553,
+            "everlux": 617,
             "cirrus": 429,
             "vigil": 533,
             "chorus": 608
@@ -1971,6 +1979,7 @@
         "beetle": {
             "veilspun": 65,
             "dusthide": 599,
+            "everlux": 677,
             "thorntail": 499
         },
         "blossom": {
@@ -2033,6 +2042,7 @@
         },
         "coral": {
             "dusthide": 602,
+            "everlux": 680,
             "cirrus": 437,
             "vigil": 552,
             "thorntail": 501
@@ -2204,9 +2214,11 @@
             "gaoler": 212,
             "veilspun": 348,
             "aberration": 211,
+            "undertide": 676,
             "sandsurge": 497,
             "dusthide": 349,
-            "everlux": 496
+            "everlux": 496,
+            "chorus": 675
         },
         "rockbreaker": {
             "aberration": 390,
@@ -2324,7 +2336,8 @@
         },
         "weathered": {
             "gaoler": 35,
-            "dusthide": 617
+            "dusthide": 617,
+            "everlux": 679
         },
         "webmane": {
             "vigil": 577
@@ -2425,6 +2438,7 @@
         "gnarlhorns": {
             "gaoler": 27,
             "sandsurge": 467,
+            "everlux": 678,
             "cirrus": 444,
             "vigil": 562
         },

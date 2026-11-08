@@ -390,6 +390,7 @@
 <option  value="555" data-breed-type="ancient" data-breed-id="25">Toxin (Dusthide)</option>
 <option  value="308" data-breed-type="ancient" data-breed-id="25">Trail (Dusthide)</option>
 <option  value="303" data-breed-type="ancient" data-breed-id="25">Weaver (Dusthide)</option>
+<option  value="617" data-breed-type="ancient" data-breed-id="26">Alloy (Everlux)</option>
 <option  value="345" data-breed-type="ancient" data-breed-id="26">Arowana (Everlux)</option>
 <option  value="347" data-breed-type="ancient" data-breed-id="26">Blend (Everlux)</option>
 <option  value="359" data-breed-type="ancient" data-breed-id="26">Butterfly (Everlux)</option>
@@ -399,6 +400,7 @@
 <option  value="378" data-breed-type="ancient" data-breed-id="26">Crown (Everlux)</option>
 <option  value="366" data-breed-type="ancient" data-breed-id="26">Current (Everlux)</option>
 <option  value="348" data-breed-type="ancient" data-breed-id="26">Daub (Everlux)</option>
+<option  value="616" data-breed-type="ancient" data-breed-id="26">Diamondback (Everlux)</option>
 <option  value="355" data-breed-type="ancient" data-breed-id="26">Edged (Everlux)</option>
 <option  value="349" data-breed-type="ancient" data-breed-id="26">Facet (Everlux)</option>
 <option  value="350" data-breed-type="ancient" data-breed-id="26">Flair (Everlux)</option>
@@ -414,7 +416,9 @@
 <option  value="356" data-breed-type="ancient" data-breed-id="26">Mottle (Everlux)</option>
 <option  value="357" data-breed-type="ancient" data-breed-id="26">Noxtide (Everlux)</option>
 <option  value="361" data-breed-type="ancient" data-breed-id="26">Paint (Everlux)</option>
+<option  value="618" data-breed-type="ancient" data-breed-id="26">Peregrine (Everlux)</option>
 <option  value="510" data-breed-type="ancient" data-breed-id="26">Rosette (Everlux)</option>
+<option  value="615" data-breed-type="ancient" data-breed-id="26">Saddle (Everlux)</option>
 <option  value="363" data-breed-type="ancient" data-breed-id="26">Sarcophagus (Everlux)</option>
 <option  value="358" data-breed-type="ancient" data-breed-id="26">Saturn (Everlux)</option>
 <option  value="353" data-breed-type="ancient" data-breed-id="26">Seraph (Everlux)</option>

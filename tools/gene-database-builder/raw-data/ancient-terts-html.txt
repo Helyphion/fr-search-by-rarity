@@ -198,6 +198,7 @@
 <option  value="127" data-breed-type="ancient" data-breed-id="21">Pufferfish (Undertide)</option>
 <option  value="119" data-breed-type="ancient" data-breed-id="21">Remora (Undertide)</option>
 <option  value="120" data-breed-type="ancient" data-breed-id="21">Ringlets (Undertide)</option>
+<option  value="676" data-breed-type="ancient" data-breed-id="21">Riot (Undertide)</option>
 <option  value="114" data-breed-type="ancient" data-breed-id="21">Runes (Undertide)</option>
 <option  value="130" data-breed-type="ancient" data-breed-id="21">Sailfin (Undertide)</option>
 <option  value="257" data-breed-type="ancient" data-breed-id="21">Scales (Undertide)</option>
@@ -421,8 +422,10 @@
 <option  value="618" data-breed-type="ancient" data-breed-id="25">Wool (Dusthide)</option>
 <option  value="350" data-breed-type="ancient" data-breed-id="26">Augment (Everlux)</option>
 <option  value="351" data-breed-type="ancient" data-breed-id="26">Batty (Everlux)</option>
+<option  value="677" data-breed-type="ancient" data-breed-id="26">Beetle (Everlux)</option>
 <option  value="465" data-breed-type="ancient" data-breed-id="26">Brightshine (Everlux)</option>
 <option  value="352" data-breed-type="ancient" data-breed-id="26">Chitin (Everlux)</option>
+<option  value="680" data-breed-type="ancient" data-breed-id="26">Coral (Everlux)</option>
 <option  value="425" data-breed-type="ancient" data-breed-id="26">Crystalline (Everlux)</option>
 <option  value="353" data-breed-type="ancient" data-breed-id="26">Eclipse (Everlux)</option>
 <option  value="361" data-breed-type="ancient" data-breed-id="26">Eclosion (Everlux)</option>
@@ -432,6 +435,7 @@
 <option  value="362" data-breed-type="ancient" data-breed-id="26">Gembond (Everlux)</option>
 <option  value="360" data-breed-type="ancient" data-breed-id="26">Gliders (Everlux)</option>
 <option  value="356" data-breed-type="ancient" data-breed-id="26">Glitch (Everlux)</option>
+<option  value="678" data-breed-type="ancient" data-breed-id="26">Gnarlhorns (Everlux)</option>
 <option  value="385" data-breed-type="ancient" data-breed-id="26">Harp (Everlux)</option>
 <option  value="363" data-breed-type="ancient" data-breed-id="26">Jellyfish (Everlux)</option>
 <option  value="364" data-breed-type="ancient" data-breed-id="26">Kumo (Everlux)</option>
@@ -461,6 +465,7 @@
 <option  value="358" data-breed-type="ancient" data-breed-id="26">Underbelly (Everlux)</option>
 <option  value="642" data-breed-type="ancient" data-breed-id="26">Warrior (Everlux)</option>
 <option  value="432" data-breed-type="ancient" data-breed-id="26">Wavecrest (Everlux)</option>
+<option  value="679" data-breed-type="ancient" data-breed-id="26">Weathered (Everlux)</option>
 <option  value="382" data-breed-type="ancient" data-breed-id="26">Whiskers (Everlux)</option>
 <option  value="383" data-breed-type="ancient" data-breed-id="26">Wish (Everlux)</option>
 <option  value="384" data-breed-type="ancient" data-breed-id="26">Wool (Everlux)</option>
@@ -623,6 +628,7 @@
 <option  value="667" data-breed-type="ancient" data-breed-id="30">Opal (Chorus)</option>
 <option  value="660" data-breed-type="ancient" data-breed-id="30">Plumage (Chorus)</option>
 <option  value="634" data-breed-type="ancient" data-breed-id="30">Quartz (Chorus)</option>
+<option  value="675" data-breed-type="ancient" data-breed-id="30">Riot (Chorus)</option>
 <option  value="650" data-breed-type="ancient" data-breed-id="30">Soap (Chorus)</option>
 <option  value="653" data-breed-type="ancient" data-breed-id="30">Spectre (Chorus)</option>
 <option  value="651" data-breed-type="ancient" data-breed-id="30">Spines (Chorus)</option>
