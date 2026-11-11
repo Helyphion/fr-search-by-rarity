@@ -17,6 +17,7 @@ export function populateModernCollapsibles() {
             checkbox.type = "checkbox";
             checkbox.name = "breed";
             checkbox.value = breed;
+            checkbox.id = breed;
 
             const label = document.createElement("label");
             label.htmlFor = breed;
@@ -48,6 +49,7 @@ export function populateAncientBreeds() {
         radioButton.type = "radio";
         radioButton.name = "breed";
         radioButton.value = breed;
+        radioButton.id = breed;
 
         const label = document.createElement("label");
         label.htmlFor = breed;

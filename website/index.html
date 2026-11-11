@@ -203,20 +203,20 @@ a {
             <form id="utilities">
                 <!-- gender -->
                 <div class="option">
-                    <input type="checkbox" name="gender" value="male" checked="true"> <label for="male">Male</label>
+                    <input type="checkbox" name="gender" value="male" checked="true" id="male"> <label for="male">Male</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="gender" value="female" checked="true"> <label for="female">Female</label>
+                    <input type="checkbox" name="gender" value="female" checked="true" id="female"> <label for="female">Female</label>
                 </div>
                 <hr style="margin:0.5rem 0rem;">
                 <!-- g1 / gen1 status -->
                 <div class="option">
-                    <input type="checkbox" name="g1" value="exclude" checked="true"> <label for="exclude">Exclude G1s</label>
+                    <input type="checkbox" name="g1" value="exclude" checked="true" id="exclude-g1s"> <label for="exclude-g1s">Exclude G1s</label>
                 </div>
                 <hr style="margin:0.5rem 0rem;">
                 <!-- rtb status -->
                 <div class="option">
-                    <input type="checkbox" name="breeding-status" value="rtb"> <label for="rtb">Ready to breed only</label>
+                    <input type="checkbox" name="breeding-status" value="rtb" id="rtb"> <label for="rtb">Ready to breed only</label>
                 </div>
             </form>
             
@@ -246,7 +246,7 @@ a {
                     <form id="breed-rarity" style="overflow:auto; height:8.7rem;">
 
                         <div class="option">
-                            <input type="checkbox" name="rarity" value="plentiful"> <label for="plentiful">Plentiful</label>
+                            <input type="checkbox" name="rarity" value="plentiful" id="breed-plentiful"> <label for="breed-plentiful">Plentiful</label>
                             <a role="button" data-bs-toggle="collapse" href="#plentiful-collapse"><i class="fa-solid fa-caret-down"></i></a>
                             <div class="breeding-cooldown">15 days</div>
                         
@@ -254,7 +254,7 @@ a {
                         </div>
 
                         <div class="option">
-                            <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
+                            <input type="checkbox" name="rarity" value="common" id="breed-common"> <label for="breed-common">Common</label>
                             <a role="button" data-bs-toggle="collapse" href="#common-collapse"><i class="fa-solid fa-caret-down"></i></a>
                             <div class="breeding-cooldown">20 days</div>
 
@@ -262,7 +262,7 @@ a {
                         </div>
 
                         <div class="option">
-                            <input type="checkbox" name="rarity" value="uncommon"> <label for="uncommon">Uncommon</label>
+                            <input type="checkbox" name="rarity" value="uncommon" id="breed-uncommon"> <label for="breed-uncommon">Uncommon</label>
                             <a role="button" data-bs-toggle="collapse" href="#uncommon-collapse"><i class="fa-solid fa-caret-down"></i></a>
                             <div class="breeding-cooldown">25 days</div>
 
@@ -270,7 +270,7 @@ a {
                         </div>
 
                         <div class="option">
-                            <input type="checkbox" name="rarity" value="limited"> <label for="limited">Limited</label>
+                            <input type="checkbox" name="rarity" value="limited" id="breed-limited"> <label for="breed-limited">Limited</label>
                             <a role="button" data-bs-toggle="collapse" href="#limited-collapse"><i class="fa-solid fa-caret-down"></i></a>
                             <div class="breeding-cooldown">30 days</div>
 
@@ -278,7 +278,7 @@ a {
                         </div>
 
                         <div class="option">
-                            <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
+                            <input type="checkbox" name="rarity" value="rare" id="breed-rare"> <label for="breed-rare">Rare</label>
                             <a role="button" data-bs-toggle="collapse" href="#rare-collapse"><i class="fa-solid fa-caret-down"></i></a>
                             <div class="breeding-cooldown">35 days</div>
 
@@ -322,20 +322,20 @@ a {
             <form id="primary">
 
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
+                    <input type="checkbox" name="rarity" value="common" id="prim-common"> <label for="prim-common">Common</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="uncommon"> <label for="uncommon">Uncommon</label>
+                    <input type="checkbox" name="rarity" value="uncommon" id="prim-uncommon"> <label for="prim-uncommon">Uncommon</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="limited"> <label for="limited">Limited</label>
+                    <input type="checkbox" name="rarity" value="limited" id="prim-limited"> <label for="prim-limited">Limited</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
+                    <input type="checkbox" name="rarity" value="rare" id="prim-rare"> <label for="prim-rare">Rare</label>
                 </div>
                 <hr style="margin:0.5rem 0rem;">
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="basic"> <label for="basic">Basic</label>
+                    <input type="checkbox" name="rarity" value="basic" id="prim-basic"> <label for="prim-basic">Basic</label>
                 </div>
                 
             </form>
@@ -355,20 +355,20 @@ a {
             <form id="secondary">
 
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
+                    <input type="checkbox" name="rarity" value="common" id="sec-common"> <label for="sec-common">Common</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="uncommon"> <label for="uncommon">Uncommon</label>
+                    <input type="checkbox" name="rarity" value="uncommon" id="sec-uncommon"> <label for="sec-uncommon">Uncommon</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="limited"> <label for="limited">Limited</label>
+                    <input type="checkbox" name="rarity" value="limited" id="sec-limited"> <label for="sec-limited">Limited</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
+                    <input type="checkbox" name="rarity" value="rare" id="sec-rare"> <label for="sec-rare">Rare</label>
                 </div>
                 <hr style="margin:0.5rem 0rem;">
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="basic"> <label for="basic">Basic</label>
+                    <input type="checkbox" name="rarity" value="basic" id="sec-basic"> <label for="sec-basic">Basic</label>
                 </div>
                 
             </form>
@@ -388,20 +388,20 @@ a {
             <form id="tertiary">
 
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="common"> <label for="common">Common</label>
+                    <input type="checkbox" name="rarity" value="common" id="tert-common"> <label for="tert-common">Common</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="uncommon"> <label for="uncommon">Uncommon</label>
+                    <input type="checkbox" name="rarity" value="uncommon" id="tert-uncommon"> <label for="tert-uncommon">Uncommon</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="limited"> <label for="limited">Limited</label>
+                    <input type="checkbox" name="rarity" value="limited" id="tert-limited"> <label for="tert-limited">Limited</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="rare"> <label for="rare">Rare</label>
+                    <input type="checkbox" name="rarity" value="rare" id="tert-rare"> <label for="tert-rare">Rare</label>
                 </div>
                 <hr style="margin:0.5rem 0rem;">
                 <div class="option">
-                    <input type="checkbox" name="rarity" value="basic"> <label for="basic">Basic</label>
+                    <input type="checkbox" name="rarity" value="basic" id="tert-basic"> <label for="tert-basic">Basic</label>
                 </div>
                 
             </form>
